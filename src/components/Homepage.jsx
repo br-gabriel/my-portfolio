@@ -1,5 +1,4 @@
 import { Outfit } from "next/font/google"
-import { LinkedinIcon } from "./Icons/Linkedin"
 
 const outfit = Outfit({
   subsets: ['latin']
