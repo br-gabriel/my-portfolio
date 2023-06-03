@@ -4,13 +4,16 @@ const outfit = Outfit({
   subsets: ['latin']
 })
 
-
 export default function Homepage() {
     return (
-        <main className="w-screen h-screen flex flex-col justify-center items-center relative bg-gradient-to-br from-violet-200 from-0% via-white from-30% to-sky-100 from-80%">
+        <main className="w-screen h-screen flex flex-col justify-center items-center relative bg-gradient-to-br from-violet-200 via-white to-sky-100">
             <div className={outfit.className}>
-                <h1 className="text-blue-950 text-7xl font-semibold text-center">Seu próximo desenvolvedor</h1>
-                <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-fuchsia-500 text-7xl font-black text-center mt-4">Fullstack ;)</h1>
+                <h1 className="text-blue-950 text-7xl font-semibold text-center">
+                    Seu próximo desenvolvedor
+                </h1>
+                <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-fuchsia-500 text-7xl font-black text-center mt-4">
+                    Fullstack ;)
+                </h1>
             </div>
 
             <p className="text-slate-600 font-light text-center max-w-lg leading-5 mt-8">
