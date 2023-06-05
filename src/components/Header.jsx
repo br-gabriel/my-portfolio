@@ -23,7 +23,7 @@ export default function Header() {
     }, [])
     
     return (
-        <header className={`w-screen flex flex-row justify-centerf fixed z-10 transition-all ease-in-out duration-500 delay-100 ${ scrolled ? 'bg-slate-200/70 backdrop-blur drop-shadow-sm': ''}`}>
+        <header className={`w-screen flex flex-row justify-center fixed z-10 transition-all ease-in-out duration-500 delay-100 ${ scrolled ? 'bg-slate-200/70 backdrop-blur drop-shadow-sm': ''}`}>
             <div className="w-full max-w-7xl px-4 py-7 flex flex-row justify-between items-center">
                 <p className={`${outfit.className} text-2xl bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-violet-500`}>
                     {"<Gabriel.dev />"}
