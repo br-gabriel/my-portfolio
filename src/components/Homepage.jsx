@@ -1,4 +1,5 @@
 import { Outfit } from "next/font/google"
+import { FaLinkedin, FaGithub } from "react-icons/fa"
 
 const outfit = Outfit({
   subsets: ['latin']
@@ -6,7 +7,7 @@ const outfit = Outfit({
 
 export default function Homepage() {
     return (
-        <main className="w-screen h-screen flex flex-col justify-center items-center relative bg-gradient-to-br from-violet-200 via-white to-sky-100">
+        <div className="h-screen flex flex-col justify-center items-center relative">
             <div className={outfit.className}>
                 <h1 className="text-blue-950 text-7xl font-semibold text-center">
                     Seu próximo desenvolvedor
@@ -21,14 +22,20 @@ export default function Homepage() {
             </p>
 
             <div className="flex gap-4 mt-8">
-                <button className="bg-slate-500 text-slate-50 px-3 py-1 rounded drop-shadow">Linked In</button>
-                <button className="bg-white text-slate-500 px-3 py-1 rounded border border-slate-500 drop-shadow">Github</button>
+                <button className="w-36 flex flex-row justify-center items-center gap-3 bg-slate-500 text-slate-50 px-3 py-1 rounded drop-shadow">
+                    <FaLinkedin size={19}/>
+                    Linked In
+                </button>
+                <button className="w-36 flex flex-row justify-center items-center gap-3 bg-white text-slate-500 px-3 py-1 rounded border border-slate-500 drop-shadow">
+                    <FaGithub size={19}/>
+                    Github
+                </button>
             </div>
 
             <div className="bg-violet-50 text-slate-500 rounded-3xl w-full min-w-sm max-w-sm px-8 py-1 flex flex-row justify-center items-center gap-3 absolute bottom-20 drop-shadow-sm">
                 <div className="w-3 h-3 rounded-xl bg-green-500"></div>
                 <p>Disponível para trabalhos freelance!</p>
             </div>
-        </main>
+        </div>
     )
 }
