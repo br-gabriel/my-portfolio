@@ -1,11 +1,9 @@
 import Image from "next/image"
 import profilePicLight from "../../public/images/lightmode-avatar.png"
 import profilePicDark from "../../public/images/darkmode-avatar.png"
-import mobileSVG from "../../public/mobile.svg"
-import nextjsSVG from "../../public/nextjs.svg"
-import figmaSVG from "../../public/figma.svg"
 import { Outfit } from "next/font/google"
 import { BsDownload } from "react-icons/bs"
+import Cards from "./Cards"
 
 const outfit = Outfit({
   subsets: ['latin']
@@ -13,8 +11,8 @@ const outfit = Outfit({
 
 export default function Aboutme() {
     return (
-        <div className="w-screen h-screen flex flex-col items-center">
-            <section className="bg-white/90 h-3/5 w-screen mt-36 flex flex-col items-center justify-center drop-shadow">
+        <div className="w-full h-screen flex flex-col items-center">
+            <section className="bg-white/90 h-3/5 w-full mt-36 flex flex-col items-center justify-center drop-shadow">
                 <div className="max-w-7xl w-full px-4 py-8 flex flex-row items-center justify-center gap-12">
                     
                     <Image src={profilePicLight} alt="foto de perfil" width={335}/>
@@ -44,20 +42,7 @@ export default function Aboutme() {
                 </div>
             </section>
 
-            <div className="max-w-7xl w-full flex flex-row items-center justify-center gap-4 mt-4 px-4">
-                <div className="min-w-[350px] h-36 bg-white/90 drop-shadow-md rounded-md flex flex-row items-center justify-center gap-5">
-                    <Image src={figmaSVG} width={50}/>
-                    <span className="max-w-[150px]">Criação de design feito com Figma</span>
-                </div>
-                <div className="min-w-[350px] h-36 bg-white/90 drop-shadow-md rounded-md flex flex-row items-center justify-center gap-5">
-                    <Image src={nextjsSVG} width={70}/>
-                    <span className="max-w-[150px]">Sites performáticos utilizando NextJS</span>
-                </div>
-                <div className="min-w-[350px] h-36 bg-white/90 drop-shadow-md rounded-md flex flex-row items-center justify-center gap-5">
-                    <Image src={mobileSVG} width={50}/>
-                    <span className="max-w-[150px]">Sites responsivos</span>
-                </div>
-            </div>
+            <Cards />
         </div>
     )
 }
