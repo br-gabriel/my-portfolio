@@ -1,3 +1,9 @@
+import Image from "next/image"
+import profilePicLight from "../../public/images/lightmode-avatar.png"
+import profilePicDark from "../../public/images/darkmode-avatar.png"
+import mobileSVG from "../../public/mobile.svg"
+import nextjsSVG from "../../public/nextjs.svg"
+import figmaSVG from "../../public/figma.svg"
 import { Outfit } from "next/font/google"
 import { BsDownload } from "react-icons/bs"
 
@@ -7,14 +13,14 @@ const outfit = Outfit({
 
 export default function Aboutme() {
     return (
-        <div className="w-screen h-screen">
+        <div className="w-screen h-screen flex flex-col items-center">
             <section className="bg-white/90 h-3/5 w-screen mt-36 flex flex-col items-center justify-center drop-shadow">
-                <div className="max-w-7xl w-full px-4 py-8 flex flex-row items-center justify-center gap-10 ">
-                    {/* avatar */}
-                    <div className="h-1/3 w-1/3 bg-gray-500 rounded-full"></div>
-                    {/* texto */}
+                <div className="max-w-7xl w-full px-4 py-8 flex flex-row items-center justify-center gap-12">
+                    
+                    <Image src={profilePicLight} alt="foto de perfil" width={335}/>
+
                     <div className="flex flex-col max-w-2xl pr-4 gap-5">
-                        <h3 className={`${outfit.className} text-violet-700 font-semibold text-3xl`}>
+                        <h3 className={`${outfit.className} text-[#6e6ad2] font-semibold text-3xl`}>
                             Sobre mim
                         </h3>
 
@@ -30,14 +36,28 @@ export default function Aboutme() {
                             Além disso, estou expandindo meus conhecimentos para o mundo backend e mobile por meio do NodeJS e React Native.
                         </p>
 
-                        <button className="w-32 px-4 py-2 bg-violet-700 text-slate-50 rounded drop-shadow flex flex-row justify-center gap-2">
+                        <button className="w-32 px-4 py-2 bg-[#6e6ad2] text-slate-50 rounded drop-shadow flex flex-row justify-center gap-2">
                             Currículo
                             <BsDownload size={20}/>
                         </button>
                     </div>
-                    
                 </div>
             </section>
+
+            <div className="max-w-7xl w-full flex flex-row items-center justify-center gap-4 mt-4 px-4">
+                <div className="min-w-[350px] h-36 bg-white/90 drop-shadow-md rounded-md flex flex-row items-center justify-center gap-5">
+                    <Image src={figmaSVG} width={50}/>
+                    <span className="max-w-[150px]">Criação de design feito com Figma</span>
+                </div>
+                <div className="min-w-[350px] h-36 bg-white/90 drop-shadow-md rounded-md flex flex-row items-center justify-center gap-5">
+                    <Image src={nextjsSVG} width={70}/>
+                    <span className="max-w-[150px]">Sites performáticos utilizando NextJS</span>
+                </div>
+                <div className="min-w-[350px] h-36 bg-white/90 drop-shadow-md rounded-md flex flex-row items-center justify-center gap-5">
+                    <Image src={mobileSVG} width={50}/>
+                    <span className="max-w-[150px]">Sites responsivos</span>
+                </div>
+            </div>
         </div>
     )
 }
