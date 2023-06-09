@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --swiper-navigation-size: 20px !important;
+  --swiper-theme-color: #6e6ad2 !important;
+}
 /* :root {
   --foreground-hex: 0, 0, 0;
   --background-start-hex: #E4E6FF;
