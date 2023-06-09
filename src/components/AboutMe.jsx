@@ -12,7 +12,7 @@ const outfit = Outfit({
 export default function Aboutme() {
     return (
         <div className="w-full h-screen flex flex-col items-center">
-            <section className="bg-white/90 h-3/5 w-full mt-36 flex flex-col items-center justify-center drop-shadow">
+            <section className="bg-white h-3/5 w-full mt-36 flex flex-col items-center justify-center drop-shadow">
                 <div className="max-w-7xl w-full px-4 py-8 flex flex-row items-center justify-center gap-12">
                     
                     <Image src={profilePicLight} alt="foto de perfil" width={335}/>
