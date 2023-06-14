@@ -18,7 +18,7 @@ export default function Footer() {
                 <ul className="text-white mt-6 ml-4 flex flex-col gap-2">
                     <li className="flex flex-row gap-4">
                         <FaWhatsapp size={20}/>
-                        (68) 99249-0473
+                        <Link href="https://wa.me/5568992490473" target="blank">(68) 99249-0473</Link>
                     </li>
                     <li className="flex flex-row gap-4">
                         <MdEmail size={20}/>
@@ -26,7 +26,7 @@ export default function Footer() {
                     </li>
                     <li className="flex flex-row gap-4">
                         <FaLinkedin size={20}/>
-                        <Link href="">Linkedin</Link>
+                        <Link href="https://www.linkedin.com/in/gabriel-silva-feitosa/" target="blank">Linkedin</Link>
                     </li>
                 </ul>
             </div>
