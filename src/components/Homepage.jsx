@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Outfit } from "next/font/google"
 import { FaLinkedin, FaGithub } from "react-icons/fa"
 
@@ -22,14 +23,18 @@ export default function Homepage() {
             </p>
 
             <div className="flex gap-4 mt-8">
-                <button className="w-36 flex flex-row justify-center items-center gap-3 bg-slate-500 text-slate-50 px-3 py-1 rounded drop-shadow duration-200 hover:bg-slate-500/80 hover:ease-in-out hover:scale-105">
-                    <FaLinkedin size={19} />
-                    Linkedin
-                </button>
-                <button className="w-36 flex flex-row justify-center items-center gap-3 bg-white text-slate-500 px-3 py-1 rounded border border-slate-500 drop-shadow duration-200 hover:text-slate-500/80 hover:border-slate-500/80 hover:ease-in-out hover:scale-105">
-                    <FaGithub size={19}/>
-                    Github
-                </button>
+                <Link href="https://www.linkedin.com/in/gabriel-silva-feitosa/" target="blank">
+                    <button className="w-36 flex flex-row justify-center items-center gap-3 bg-slate-500 text-slate-50 px-3 py-1 rounded drop-shadow duration-200 hover:bg-slate-500/80 hover:ease-in-out hover:scale-105">
+                        <FaLinkedin size={19} />
+                        Linkedin
+                    </button>
+                </Link>
+                <Link href="https://github.com/br-gabriel" target="blank">
+                    <button className="w-36 flex flex-row justify-center items-center gap-3 bg-white text-slate-500 px-3 py-1 rounded border border-slate-500 drop-shadow duration-200 hover:text-slate-500/80 hover:border-slate-500/80 hover:ease-in-out hover:scale-105">
+                        <FaGithub size={19}/>
+                        Github
+                    </button>
+                </Link>
             </div>
 
             <div className="bg-violet-50 text-slate-500 rounded-3xl w-full min-w-sm max-w-sm px-8 py-1 flex flex-row justify-center items-center gap-3 absolute bottom-20 drop-shadow">
