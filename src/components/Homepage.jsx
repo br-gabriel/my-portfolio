@@ -22,11 +22,11 @@ export default function Homepage() {
             </p>
 
             <div className="flex gap-4 mt-8">
-                <button className="w-36 flex flex-row justify-center items-center gap-3 bg-slate-500 text-slate-50 px-3 py-1 rounded drop-shadow duration-200 hover:bg-slate-500/80 hover:ease-in-out">
+                <button className="w-36 flex flex-row justify-center items-center gap-3 bg-slate-500 text-slate-50 px-3 py-1 rounded drop-shadow duration-200 hover:bg-slate-500/80 hover:ease-in-out hover:scale-105">
                     <FaLinkedin size={19} />
                     Linkedin
                 </button>
-                <button className="w-36 flex flex-row justify-center items-center gap-3 bg-white text-slate-500 px-3 py-1 rounded border border-slate-500 drop-shadow duration-200 hover:bg-slate-500/80 hover:text-slate-50 hover:border-slate-500/20 hover:ease-in-out">
+                <button className="w-36 flex flex-row justify-center items-center gap-3 bg-white text-slate-500 px-3 py-1 rounded border border-slate-500 drop-shadow duration-200 hover:bg-slate-500/80 hover:text-slate-50 hover:border-slate-500/20 hover:ease-in-out  hover:scale-105">
                     <FaGithub size={19}/>
                     Github
                 </button>
