@@ -34,7 +34,7 @@ export default function Aboutme() {
                             Além disso, estou expandindo meus conhecimentos para o mundo backend e mobile por meio do NodeJS e React Native.
                         </p>
 
-                        <button className="w-32 px-4 py-2 bg-[#6e6ad2] text-slate-50 rounded drop-shadow flex flex-row justify-center gap-2">
+                        <button className="w-32 px-4 py-2 bg-[#6e6ad2] text-slate-50 rounded drop-shadow flex flex-row justify-center gap-2 duration-200 hover:bg-[#6e6ad2]/80 hover:ease-in-out">
                             Currículo
                             <BsDownload size={20}/>
                         </button>
