@@ -24,7 +24,7 @@ export default function Homepage() {
 
             <div className="flex gap-4 mt-8">
                 <Link href="https://www.linkedin.com/in/gabriel-silva-feitosa/" target="blank">
-                    <button className="w-36 flex flex-row justify-center items-center gap-3 bg-slate-500 text-slate-50 px-3 py-1 rounded drop-shadow duration-200 hover:bg-slate-500/80 hover:ease-in-out hover:scale-105">
+                    <button className="w-36 flex flex-row justify-center items-center gap-3 bg-slate-500 border border-slate-500  text-slate-50 px-3 py-1 rounded drop-shadow duration-200 hover:bg-slate-500/80 hover:ease-in-out hover:scale-105">
                         <FaLinkedin size={19} />
                         Linkedin
                     </button>
