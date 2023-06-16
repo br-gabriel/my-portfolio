@@ -1,0 +1,64 @@
+{
+    "cards": [
+        {
+            "title": "Cripto Tracker App",
+            "description": "Aplicativo que lista todas as criptomoedas do mercado, mostrando suas principais informações. Nesse aplicativo foi aplicado conhecimentos de rotas, criação de gráficos, sistema de busca e um sistema de escolha da moeda (real ou dólar) de forma dinâmica.",
+            "tags": [
+                "React Native", "Styled Components", "React Navigation", "React Native Chart Kit"
+            ],
+            "image": {
+                "url": "https://i.imgur.com/d7NS7fQ.png",
+                "alt": "Banner de apresentação do aplicativo, mostrando as três telas principais (Listagem de moedas, Resultado de busca e detalhes da moeda)"
+            },
+            "links": {
+                "firstLink": "https://github.com/br-gabriel/cripto-app",
+                "secondLink": ""
+            }
+        },
+        {
+            "title": "Habit App",
+            "description": "Site e aplicativo de acompanhamento de hábitos, desenvolvida durante a primera NLW da Rocketseat de 2023.",
+            "tags": [
+                "React", "React Native", "Node", "Tailwind", "Prisma", "SQLite"
+            ],
+            "image": {
+                "url": "https://i.imgur.com/LZ3ir9t.png",
+                "alt": "Banner de apresentação do site e do aplicativo, mostrando o histórico de hábitos de um usuário"
+            },
+            "links": {
+                "firstLink": "https://github.com/br-gabriel/NLW-Habit-Tracker",
+                "secondLink": ""
+            }
+        },
+        {
+            "title": "Site Finans",
+            "description": "Site simples de uma instituição financeira, criada para treinar os conceitos aprendidos com Bootstrap.",
+            "tags": [
+                "HTML", "Bootstrap", "Javascript"
+            ],
+            "image": {
+                "url": "https://i.imgur.com/ZNGhrZe.png",
+                "alt": "Banner de apresentação mostrando a parte inicial do site"
+            },
+            "links": {
+                "firstLink": "https://github.com/br-gabriel/Site-com-bootstrap-4",
+                "secondLink": "https://br-gabriel.github.io/Site-com-bootstrap-4/"
+            }
+        },
+        {
+            "title": "Site Gestor Financeiro",
+            "description": "Um projeto em React que armazena o histórico de entrada e saída de valores e calcula o saldo final. Criado para consolidar os aprendizados de React e introduzir os conceitos de Typescript.",
+            "tags": [
+                "React", "Typescript"
+            ],
+            "image": {
+                "url": "https://i.imgur.com/C1seHjd.png",
+                "alt": "Banner mostrando o painel do gestor financeiro"
+            },
+            "links": {
+                "firstLink": "https://github.com/br-gabriel/dtmoney-finance",
+                "secondLink": "https://effulgent-crepe-8e024f.netlify.app"
+            }
+        }
+    ]
+}
