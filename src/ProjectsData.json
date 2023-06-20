@@ -2,7 +2,7 @@
     "cards": [
         {
             "title": "Cripto Tracker App",
-            "description": "Aplicativo que lista todas as criptomoedas do mercado, mostrando suas principais informações. Nesse aplicativo foi aplicado conhecimentos de rotas, criação de gráficos, sistema de busca e um sistema de escolha da moeda (real ou dólar) de forma dinâmica.",
+            "description": "Aplicativo para acompanhar as princiapais informações de criptomoedas.",
             "tags": [
                 "React Native", "Styled Components", "React Navigation", "React Native Chart Kit"
             ],
@@ -32,7 +32,7 @@
         },
         {
             "title": "Site Finans",
-            "description": "Site simples de uma instituição financeira, criada para treinar os conceitos aprendidos com Bootstrap.",
+            "description": "Site de uma instituição financeira ficticia, criada para treinar os conceitos aprendidos com Bootstrap.",
             "tags": [
                 "HTML", "Bootstrap", "Javascript"
             ],
@@ -47,7 +47,7 @@
         },
         {
             "title": "Site Gestor Financeiro",
-            "description": "Um projeto em React que armazena o histórico de entrada e saída de valores e calcula o saldo final. Criado para consolidar os aprendizados de React e introduzir os conceitos de Typescript.",
+            "description": "Um projeto que armazena o histórico de entrada e saída de valores e calcula o saldo final.",
             "tags": [
                 "React", "Typescript"
             ],
