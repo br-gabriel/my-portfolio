@@ -51,7 +51,7 @@ export default function Carousel() {
                                         <h3 className={`${outfit.className} text-blue-950 font-semibold text-xl text-center mb-4`}>
                                             {card.title}
                                         </h3>
-                                        <div className='max-h-[7em] w-[100%] overflow-y-auto'>
+                                        <div className='max-h-[7em] w-[100%] overflow-hidden'>
                                             <span>
                                                 {card.description}
                                             </span>
