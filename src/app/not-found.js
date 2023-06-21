@@ -14,7 +14,7 @@ export default function NotFound() {
           404
         </h2>
 
-        <h3 className={`${outfit.className} text-blue-950 text-3xl font-semibold mb-6`}>
+        <h3 className={`${outfit.className} text-blue-950 text-3xl font-semibold mb-6 text-center`}>
           Ops! página não encontrada
         </h3>
 
