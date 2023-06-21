@@ -34,7 +34,7 @@ export default function Carousel() {
             <swiper-container
                 space-between="20"
                 slides-per-view={largura > 900 ? 2 : 1}
-                navigation="true"
+                navigation="false"
                 pagination="false"
                 loop="true"
                 autoplay="true"
@@ -90,5 +90,4 @@ export default function Carousel() {
             </swiper-container>
         </div>
     )
-
 }
