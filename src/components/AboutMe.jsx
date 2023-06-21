@@ -29,11 +29,11 @@ export default function Aboutme() {
                         </p>
 
                         <p className="text-justify text-sm md:text-base">
-                            Sou um Desenvolvedor Web com foco em desenvolvimento frontend. Gosto de criar interfaces e transforma-las em código, buscando sempre deixar o mais fíel possível ao design original e com boa performance.
+                            Sou um Desenvolvedor Web com foco em desenvolvimento front-end. Gosto de criar interfaces e transforma-las em código, buscando sempre um equilíbrio entre beleza e boa performance.
                         </p>
 
                         <p className="text-justify text-sm md:text-base">
-                            Além disso, estou expandindo meus conhecimentos para o mundo backend e mobile por meio do NodeJS e React Native.
+                            Além disso, estou expandindo meus conhecimentos para o mundo back-end e mobile por meio do NodeJS e React Native.
                         </p>
 
                         <button className="w-32 px-4 py-2 bg-[#6e6ad2] text-slate-50 rounded drop-shadow flex flex-row justify-center gap-2 duration-200 hover:bg-[#6e6ad2]/80 hover:text-white hover:ease-in-out hover:scale-105">
