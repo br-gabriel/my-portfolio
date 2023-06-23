@@ -44,10 +44,10 @@ export default function Header() {
 
                 <nav>
                     <ul className="hidden md:flex flex-row gap-8 font-semibold text-slate-700">
-                        <li><Link to="home" smooth={true} duration={1000} className="hover:opacity-60 transition-all ease-in-out duration-500">Home</Link></li>
-                        <li><Link to="aboutMe" smooth={true} duration={1000} className="hover:opacity-60 transition-all ease-in-out duration-500">Sobre mim</Link></li>
-                        <li><Link to="projects" offset={-70} smooth={true} duration={1000} className="hover:opacity-60 transition-all ease-in-out duration-500">Projetos</Link></li>
-                        <li><Link to="contacts" smooth={true} duration={1000} className="hover:opacity-60 transition-all ease-in-out duration-500">Contatos</Link></li>
+                        <li><Link to="home" smooth={true} duration={1000} className="hover:opacity-60 transition-all ease-in-out duration-500 cursor-pointer">Home</Link></li>
+                        <li><Link to="aboutMe" smooth={true} duration={1000} className="hover:opacity-60 transition-all ease-in-out duration-500 cursor-pointer">Sobre mim</Link></li>
+                        <li><Link to="projects" offset={-70} smooth={true} duration={1000} className="hover:opacity-60 transition-all ease-in-out duration-500 cursor-pointer">Projetos</Link></li>
+                        <li><Link to="contacts" smooth={true} duration={1000} className="hover:opacity-60 transition-all ease-in-out duration-500 cursor-pointer">Contatos</Link></li>
                     </ul>
                 </nav>
 

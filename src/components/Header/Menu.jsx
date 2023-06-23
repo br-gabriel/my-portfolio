@@ -23,30 +23,30 @@ export default function Menu({ isVisible, onClose }) {
           
           <div className="flex flex-col items-center justify-start gap-4">
             <Link to="home" smooth={true} duration={1000} onClick={onClose}>
-              <button className="w-60 bg-[#cad2fea2] rounded px-10 py-2">
+              <button className="w-60 bg-[#cad2fea2] rounded px-10 py-2 cursor-pointer">
                 Home
               </button>
             </Link>
 
             <Link to="aboutMe" offset={-70} smooth={true} duration={1000} onClick={onClose}>
-              <button className="w-60 bg-[#cad2fea2] rounded px-10 py-2">
+              <button className="w-60 bg-[#cad2fea2] rounded px-10 py-2 cursor-pointer">
                 Sobre mim
               </button>
             </Link>
 
             <Link to="projects" offset={-40} smooth={true} duration={1000} onClick={onClose}>
-              <button className="w-60 bg-[#cad2fea2] rounded px-10 py-2">
+              <button className="w-60 bg-[#cad2fea2] rounded px-10 py-2 cursor-pointer">
                 Projetos
               </button>
             </Link>
 
             <Link to="contacts" smooth={true} duration={1000} onClick={onClose}>
-              <button className="w-60 bg-[#cad2fea2] rounded px-10 py-2">
+              <button className="w-60 bg-[#cad2fea2] rounded px-10 py-2 cursor-pointer">
                 Contatos
               </button>
             </Link>
 
-            {/* <button className="w-60 bg-[#cad2fea2] rounded px-10 py-2 mt-40 flex flex-row items-center justify-center gap-2">
+            {/* <button className="w-60 bg-[#cad2fea2] rounded px-10 py-2 mt-40 flex flex-row items-center justify-center gap-2 cursor-pointer">
               <FiMoon size={22} />
               Modo escuro
             </button> */}
