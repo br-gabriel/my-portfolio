@@ -44,10 +44,10 @@ export default function Header() {
 
                 <nav>
                     <ul className="hidden md:flex flex-row gap-8 font-semibold text-slate-700">
-                        <li><Link href="">Home</Link></li>
-                        <li><Link href="">Sobre mim</Link></li>
-                        <li><Link href="">Projetos</Link></li>
-                        <li><Link href="">Contatos</Link></li>
+                        <li><Link href="" className="hover:opacity-70 transition-all ease-in-out duration-500">Home</Link></li>
+                        <li><Link href="" className="hover:opacity-70 transition-all ease-in-out duration-500">Sobre mim</Link></li>
+                        <li><Link href="" className="hover:opacity-70 transition-all ease-in-out duration-500">Projetos</Link></li>
+                        <li><Link href="" className="hover:opacity-70 transition-all ease-in-out duration-500">Contatos</Link></li>
                     </ul>
                 </nav>
 
