@@ -8,7 +8,7 @@ const outfit = Outfit({
 
 export default function Homepage() {
     return (
-        <div className="h-screen flex flex-col justify-center items-center relative">
+        <div id="home" className="h-screen flex flex-col justify-center items-center relative">
             <div className={outfit.className}>
                 <h1 className="text-blue-950 text-5xl md:text-6xl font-semibold text-center">
                     Seu próximo

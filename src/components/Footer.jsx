@@ -16,7 +16,7 @@ export default function Footer() {
     }
     
     return (
-        <footer className="w-full flex justify-center bg-black">
+        <footer id="contacts" className="w-full flex justify-center bg-black">
             <div className="w-full max-w-7xl px-4 py-5">
                 <h3 className={`${outfit.className} text-2xl bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-violet-500 to-violet-500`}>
                     Vamos trabalhar juntos!

@@ -1,6 +1,6 @@
-import Link from "next/link"
 import { FiMoon } from "react-icons/fi"
 import { Outfit } from "next/font/google"
+import { Link, animateScroll as scroll } from 'react-scroll'
 
 const outfit = Outfit({
   subsets: ['latin']
@@ -22,25 +22,25 @@ export default function Menu({ isVisible, onClose }) {
           </span>
           
           <div className="flex flex-col items-center justify-start gap-4">
-            <Link href="" onClick={onClose}>
+            <Link to="home" smooth={true} duration={1000} onClick={onClose}>
               <button className="w-60 bg-[#cad2fea2] rounded px-10 py-2">
                 Home
               </button>
             </Link>
 
-            <Link href="" onClick={onClose}>
+            <Link to="aboutMe" offset={-70} smooth={true} duration={1000} onClick={onClose}>
               <button className="w-60 bg-[#cad2fea2] rounded px-10 py-2">
                 Sobre mim
               </button>
             </Link>
 
-            <Link href="" onClick={onClose}>
+            <Link to="projects" offset={-40} smooth={true} duration={1000} onClick={onClose}>
               <button className="w-60 bg-[#cad2fea2] rounded px-10 py-2">
                 Projetos
               </button>
             </Link>
 
-            <Link href="" onClick={onClose}>
+            <Link to="contacts" smooth={true} duration={1000} onClick={onClose}>
               <button className="w-60 bg-[#cad2fea2] rounded px-10 py-2">
                 Contatos
               </button>
