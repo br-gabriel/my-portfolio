@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import Image from 'next/image'
-import { cards } from '../ProjectsData.json'
+import { projectsCards } from '../ProjectsData.json'
 import { register } from 'swiper/element/bundle'
 import { Outfit } from 'next/font/google'
 import { FaGithub } from 'react-icons/fa'
@@ -15,7 +15,7 @@ const outfit = Outfit({
 register()
 
 export default function Carousel() {
-    const [largura, setLargura] = useState(window.innerWidth)
+    const [largura, setLargura] = useState(0)
 
     useEffect(() => {
         const handleResize = () => {
@@ -40,7 +40,7 @@ export default function Carousel() {
                 autoplay="true"
                 speed="500"
             >
-                {cards.map((card) => (
+                {projectsCards.map((card) => (
                     <swiper-slide key={card.title}>
                         <div className='flex justify-center m-2 p-2'>
                             <div className='flex flex-col items-center h-[500px] w-[26em] p-4 mb-2 rounded-lg bg-white drop-shadow-md relative'>
