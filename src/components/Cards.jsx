@@ -9,7 +9,7 @@ import { useState, useEffect } from "react"
 register()
 
 export default function Cards() {   
-    const [largura, setLargura] = useState(window.innerWidth)
+    const [largura, setLargura] = useState(0)
 
     useEffect(() => {
         const handleResize = () => {
