@@ -25,7 +25,6 @@ export default function Cards() {
 
     return (
         <section className="max-w-7xl w-full flex flex-row items-center justify-center gap-4 px-4 py-3">
-            {console.log(largura)}
             <swiper-container
                 space-between="10"
                 slides-per-view={largura > 900 ? 3 : 1}
