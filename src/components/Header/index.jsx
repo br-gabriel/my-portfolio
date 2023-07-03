@@ -44,10 +44,26 @@ export default function Header() {
 
                 <nav>
                     <ul className="hidden md:flex flex-row gap-8 font-semibold text-slate-700">
-                        <li><Link to="home" smooth={true} duration={1000} className="hover:opacity-60 transition-all ease-in-out duration-500 cursor-pointer">Home</Link></li>
-                        <li><Link to="aboutMe" smooth={true} duration={1000} className="hover:opacity-60 transition-all ease-in-out duration-500 cursor-pointer">Sobre mim</Link></li>
-                        <li><Link to="projects" offset={-70} smooth={true} duration={1000} className="hover:opacity-60 transition-all ease-in-out duration-500 cursor-pointer">Projetos</Link></li>
-                        <li><Link to="contacts" smooth={true} duration={1000} className="hover:opacity-60 transition-all ease-in-out duration-500 cursor-pointer">Contatos</Link></li>
+                        <li>
+                            <Link to="home" smooth={true} duration={1000} className="relative cursor-pointer px-1 after:content-[''] after:absolute after:bg-violet-500 after:w-[0px] after:h-[3px] after:bottom-[-10px] after:left-0 after:rounded-full after:transition-all after:duration-200 after:ease-in-out hover:after:w-full">
+                                Home
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="aboutMe" smooth={true} duration={1000} className="relative cursor-pointer px-1 after:content-[''] after:absolute after:bg-violet-500 after:w-[0px] after:h-[3px] after:bottom-[-10px] after:left-0 after:rounded-full after:transition-all after:duration-200 after:ease-in-out hover:after:w-full">
+                                Sobre mim
+                            </Link>
+                            </li>
+                        <li>
+                            <Link to="projects" offset={-70} smooth={true} duration={1000} className="relative cursor-pointer px-1 after:content-[''] after:absolute after:bg-violet-500 after:w-[0px] after:h-[3px] after:bottom-[-10px] after:left-0 after:rounded-full after:transition-all after:duration-200 after:ease-in-out hover:after:w-full">
+                                Projetos
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="contacts" smooth={true} duration={1000} className="relative cursor-pointer px-1 after:content-[''] after:absolute after:bg-violet-500 after:w-[0px] after:h-[3px] after:bottom-[-10px] after:left-0 after:rounded-full after:transition-all after:duration-200 after:ease-in-out hover:after:w-full">
+                                Contatos
+                            </Link>
+                        </li>
                     </ul>
                 </nav>
 
