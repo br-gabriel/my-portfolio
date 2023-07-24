@@ -4,6 +4,7 @@ import { Outfit } from "next/font/google"
 import { BiMenu } from "react-icons/bi"
 import { useCallback, useEffect, useState } from "react"
 import Menu from "./Menu"
+import { ThemeSwitchBtn } from '../ThemeSwitch';
 
 const outfit = Outfit({
     subsets: ['latin']
@@ -36,14 +37,14 @@ export default function Header() {
     }, [scrollPos])
 
     return (
-        <header className={`w-screen flex flex-row justify-center fixed z-10 ease-in-out transition-all duration-500 mdelay-100 ${scrollPos > 0 ? 'bg-gradient-to-r from-[#E4E6FF]/70 via-white/70 to-[#E4EBFF]/70 backdrop-blur drop-shadow-sm' : ''} ${scrollDir === 'down' || scrollPos === 0 ? 'md:transform md:translate-y-0' : 'md:-translate-y-full'}`}>
+        <header className={`w-screen flex flex-row justify-center fixed z-10 ease-in-out transition-all duration-500 mdelay-100 ${scrollPos > 0 ? 'bg-gradient-to-r from-[#E4E6FF]/70 dark:from-[#1F1E3B]/70 via-white/70 dark:via-black/70 to-[#E4EBFF]/70 dark:to-[#142127]/70 backdrop-blur drop-shadow-sm' : ''} ${scrollDir === 'down' || scrollPos === 0 ? 'md:transform md:translate-y-0' : 'md:-translate-y-full'}`}>
             <div className="w-full max-w-7xl px-5 py-7 flex flex-row justify-between items-center">
                 <span className={`${outfit.className} text-2xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-violet-500`}>
                     {"<Gabriel.dev />"}
                 </span>
 
                 <nav>
-                    <ul className="hidden md:flex flex-row gap-8 font-semibold text-slate-700">
+                    <ul className="hidden md:flex flex-row gap-8 font-semibold text-slate-700 dark:text-slate-50">
                         <li>
                             <Link to="home" smooth={true} duration={1000} className="relative cursor-pointer px-1 after:content-[''] after:absolute after:bg-violet-500 after:w-[0px] after:h-[3px] after:bottom-[-10px] after:left-0 after:rounded-full after:transition-all after:duration-200 after:ease-in-out hover:after:w-full">
                                 Home
@@ -63,6 +64,9 @@ export default function Header() {
                             <Link to="contacts" smooth={true} duration={1000} className="relative cursor-pointer px-1 after:content-[''] after:absolute after:bg-violet-500 after:w-[0px] after:h-[3px] after:bottom-[-10px] after:left-0 after:rounded-full after:transition-all after:duration-200 after:ease-in-out hover:after:w-full">
                                 Contatos
                             </Link>
+                        </li>
+                        <li>
+                            <ThemeSwitchBtn />
                         </li>
                     </ul>
                 </nav>

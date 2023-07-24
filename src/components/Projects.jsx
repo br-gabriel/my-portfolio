@@ -16,7 +16,7 @@ export default function Projects() {
         </span>
 
         <h3
-          className={`${outfit.className} font-semibold text-blue-950 text-2xl md:text-3xl`}
+          className={`${outfit.className} font-semibold text-blue-950 dark:text-slate-50 text-2xl md:text-3xl`}
         >
           Projetos recentes
         </h3>

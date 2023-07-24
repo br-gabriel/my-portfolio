@@ -43,16 +43,16 @@ export default function Carousel() {
                 {projectsCards.map((card) => (
                     <swiper-slide key={card.title}>
                         <div className='flex justify-center m-2 p-2'>
-                            <div className='flex flex-col items-center h-[500px] w-[26em] p-4 mb-2 rounded-lg bg-white drop-shadow-md relative'>
+                            <div className='flex flex-col items-center h-[500px] w-[26em] p-4 mb-2 rounded-lg bg-white dark:bg-black/80 drop-shadow-md relative'>
                                 <Image src={card.image.url} alt={card.image.alt} width={400} height={320} className='rounded-lg' />
 
-                                <div className='bg-white pt-4 h-full flex flex-col justify-between items-center'>
+                                <div className='bg-white dark:bg-transparent pt-4 h-full flex flex-col justify-between items-center'>
                                     <div>
-                                        <h3 className={`${outfit.className} text-blue-950 font-semibold text-xl text-center mb-4`}>
+                                        <h3 className={`${outfit.className} text-blue-950 dark:text-slate-100 font-semibold text-xl text-center mb-4`}>
                                             {card.title}
                                         </h3>
                                         <div className='max-h-[7em] w-[100%] overflow-hidden'>
-                                            <span>
+                                            <span className='dark:text-slate-50'>
                                                 {card.description}
                                             </span>
                                         </div>
@@ -60,7 +60,7 @@ export default function Carousel() {
                                     {card.links.secondLink === "" ?
                                         <div className='flex flex-row items-center justify-center w-[100%] mt-4'>
                                             <Link href={card.links.firstLink} target='blank' className='w-full'>
-                                                <button className='w-full flex flex-row justify-center items-center gap-3 bg-slate-500 border border-slate-500  text-slate-50 px-3 py-1 rounded drop-shadow duration-200 hover:bg-slate-500/80 hover:ease-in-out hover:scale-105'>
+                                                <button className='w-full flex flex-row justify-center items-center gap-3 bg-slate-500 dark:bg-slate-50 border border-slate-500 dark:border-slate-50 text-slate-50 dark:text-slate-600 px-3 py-1 rounded drop-shadow duration-200 hover:bg-slate-500/80 dark:hover:bg-slate-50/80 hover:ease-in-out hover:scale-105'>
                                                     <FaGithub size={19} />
                                                     Github
                                                 </button>
@@ -69,13 +69,13 @@ export default function Carousel() {
                                         :
                                         <div className='flex flex-row items-center justify-center gap-2 w-[100%] mt-4'>
                                             <Link href={card.links.firstLink} target='blank'>
-                                                <button className='w-full px-7 flex flex-row justify-center items-center gap-3 bg-slate-500 border border-slate-500  text-slate-50 py-1 rounded drop-shadow duration-200 hover:bg-slate-500/80 hover:ease-in-out hover:scale-105'>
+                                                <button className='w-full px-7 flex flex-row justify-center items-center gap-3 bg-slate-500 dark:bg-slate-50 border border-slate-500 dark:border-slate-50 text-slate-50 dark:text-slate-600 py-1 rounded drop-shadow duration-200 hover:bg-slate-500/80 dark:hover:bg-slate-50/80 hover:ease-in-out hover:scale-105'>
                                                     <FaGithub size={19} />
                                                     Github
                                                 </button>
                                             </Link>
                                             <Link href={card.links.secondLink} target='blank'>
-                                                <button className='w-full flex flex-row justify-center items-center gap-3 bg-white text-slate-500 px-3 py-1 rounded border border-slate-500 drop-shadow duration-200 hover:text-slate-500/80 hover:border-slate-500/80 hover:ease-in-out hover:scale-105'>
+                                                <button className='w-full flex flex-row justify-center items-center gap-3 bg-white dark:bg-transparent text-slate-500 dark:text-slate-50 px-3 py-1 rounded border border-slate-500 dark:border-slate-50 drop-shadow duration-200 hover:text-slate-500/80 dark:hover:text-slate-50/80 hover:border-slate-500/80 dark:hover:border-slate-50/80 hover:ease-in-out hover:scale-105'>
                                                     <GoLinkExternal size={19} />
                                                     Live demo
                                                 </button>

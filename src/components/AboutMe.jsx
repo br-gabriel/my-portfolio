@@ -13,7 +13,7 @@ const outfit = Outfit({
 export default function Aboutme() {
     return (
         <div id="aboutMe" className="w-full h-screen flex flex-col items-center">
-            <section className="bg-white w-full h-full md:h-3/5 mt-0 md:mt-36 flex flex-col items-center justify-center drop-shadow">
+            <section className="bg-white dark:bg-black/60 w-full h-full md:h-3/5 mt-0 md:mt-36 flex flex-col items-center justify-center drop-shadow">
                 <div className="max-w-7xl w-full px-4 py-8 flex flex-col md:flex-row items-center justify-center gap-12">
                     
                     <div className="w-[235px] md:min-w-[335px]">
@@ -25,15 +25,15 @@ export default function Aboutme() {
                             Sobre mim
                         </h3>
 
-                        <p className="text-justify text-sm md:text-base">
+                        <p className="text-justify text-sm md:text-base dark:text-slate-50">
                             Meu nome é Gabriel Silva Feitosa, tenho 25 anos e sou apaixonado por tecnologia e programação.
                         </p>
 
-                        <p className="text-justify text-sm md:text-base">
-                            Sou um Desenvolvedor Web com foco em desenvolvimento front-end. Gosto de criar interfaces e transforma-las em código, buscando sempre um equilíbrio entre beleza e boa performance.
+                        <p className="text-justify text-sm md:text-base dark:text-slate-50">
+                            Sou Desenvolvedor Web com foco em desenvolvimento front-end. Gosto de criar interfaces e transforma-las em código, buscando sempre um equilíbrio entre beleza e boa performance.
                         </p>
 
-                        <p className="text-justify text-sm md:text-base">
+                        <p className="text-justify text-sm md:text-base dark:text-slate-50">
                             Além disso, estou expandindo meus conhecimentos para o mundo back-end e mobile por meio do NodeJS e React Native.
                         </p>
 
