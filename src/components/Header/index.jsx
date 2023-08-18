@@ -1,10 +1,10 @@
 "use client"
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { Link, animateScroll as scroll } from 'react-scroll'
 import { Outfit } from "next/font/google"
 import { BiMenu } from "react-icons/bi"
 import { useCallback, useEffect, useState } from "react"
 import Menu from "./Menu"
-import { ThemeSwitchBtn } from '../ThemeSwitch';
+import ThemeSwitchBtn from './ThemeSwitch'
 
 const outfit = Outfit({
     subsets: ['latin']
@@ -25,9 +25,9 @@ export default function Header() {
 
     useEffect(() => {
         const handleScroll = () => {
-            const currentScrollPos = window.pageYOffset;
-            setScrollDir(currentScrollPos > scrollPos ? 'down' : 'up');
-            setScrollPos(currentScrollPos);
+            const currentScrollPos = window.pageYOffset
+            setScrollDir(currentScrollPos > scrollPos ? 'down' : 'up')
+            setScrollPos(currentScrollPos)
         }
 
         window.addEventListener('scroll', handleScroll)
@@ -70,7 +70,7 @@ export default function Header() {
                         </li>
                     </ul>
                 </nav>
-
+                
                 <button className="p-1 md:hidden" onClick={openMenu}>
                     <BiMenu className="fill-[#6e6ad2] w-8 h-8" />
                 </button>
