@@ -1,7 +1,7 @@
 import Homepage from "@/components/Homepage"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
-import Aboutme from "@/components/AboutMe"
+import Aboutme from "@/components/Aboutme"
 import Projects from "@/components/Projects"
 
 export default function Home() {
