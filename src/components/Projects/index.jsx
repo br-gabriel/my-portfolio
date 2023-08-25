@@ -7,7 +7,7 @@ const outfit = Outfit({
 
 export default function Projects() {
   return (
-    <section id="projects" className="mt-10 w-full h-screen flex flex-col items-center justify-start">
+    <section id="projects" className="mt-20 w-full h-screen flex flex-col items-center justify-start">
       <div className="mt-20 md:mt-12 flex flex-col items-center">
         <span
           className={`${outfit.className} font-semibold text-[#6e6ad2] mb-2`}
