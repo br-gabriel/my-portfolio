@@ -2,7 +2,7 @@
     "projectsCards": [
         {
             "title": "Cripto Tracker App",
-            "description": "Aplicativo para acompanhar as princiapais informações de criptomoedas.",
+            "description": "Aplicativo para acompanhar as principais informações de criptomoedas.",
             "tags": [
                 "React Native", "Styled Components", "React Navigation", "React Native Chart Kit"
             ],
@@ -46,7 +46,7 @@
             }
         },
         {
-            "title": "Site Gestor Financeiro",
+            "title": "Gestor Financeiro",
             "description": "Um projeto que armazena o histórico de entrada e saída de valores e calcula o saldo final.",
             "tags": [
                 "React", "Typescript"
