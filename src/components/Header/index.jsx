@@ -37,7 +37,7 @@ export default function Header() {
     }, [scrollPos])
 
     return (
-        <header className={`w-screen flex flex-row justify-center fixed z-10 ease-in-out transition-all duration-500 mdelay-100 ${scrollPos > 0 ? 'bg-gradient-to-r from-[#E4E6FF]/70 dark:from-[#1F1E3B]/70 via-white/70 dark:via-black/70 to-[#E4EBFF]/70 dark:to-[#142127]/70 backdrop-blur drop-shadow-sm' : ''} ${scrollDir === 'down' || scrollPos === 0 ? 'md:transform md:translate-y-0' : 'md:-translate-y-full'}`}>
+        <header className={`w-screen flex flex-row justify-center fixed z-10 ease-in-out transition-all duration-500 delay-100 ${scrollPos > 0 ? 'bg-gradient-to-r from-[#E4E6FF]/70 dark:from-[#1F1E3B]/70 via-white/70 dark:via-black/70 to-[#E4EBFF]/70 dark:to-[#142127]/70 backdrop-blur drop-shadow-sm' : ''} ${scrollDir === 'down' || scrollPos === 0 ? 'md:transform md:translate-y-0' : 'md:-translate-y-full'}`}>
             <div className="w-full max-w-7xl px-5 py-7 flex flex-row justify-between items-center">
                 <span className={`${outfit.className} text-2xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-violet-500`}>
                     {"<Gabriel.dev />"}
