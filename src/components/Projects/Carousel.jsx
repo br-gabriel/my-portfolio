@@ -2,92 +2,78 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { projectsCards } from './ProjectsData.json'
-import { register } from 'swiper/element/bundle'
 import { Outfit } from 'next/font/google'
 import { FaGithub } from 'react-icons/fa'
 import { GoLinkExternal } from 'react-icons/go'
-import { useState, useEffect } from "react"
+import { useState } from "react"
+import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs'
 
 const outfit = Outfit({
     subsets: ['latin'],
 })
 
-register()
-
 export default function Carousel() {
-    const [largura, setLargura] = useState(null)
+    const [currentIndex, setCurrentIndex] = useState(2)
 
-    useEffect(() => {
-        const handleResize = () => {
-            setLargura(window.innerWidth)
-        }
+    const prevSlide = () => {
+        const isFirstSlide = currentIndex === 0;
+        const newIndex = isFirstSlide ? projectsCards.length - 1 : currentIndex - 1;
+        setCurrentIndex(newIndex);
+    };
 
-        window.addEventListener('resize', handleResize)
+    const nextSlide = () => {
+        const isLastSlide = currentIndex === projectsCards.length - 1;
+        const newIndex = isLastSlide ? 0 : currentIndex + 1;
+        setCurrentIndex(newIndex);
+    };
 
-        return () => {
-            window.removeEventListener('resize', handleResize)
-        }
-    }, [])
-    
-    return (
-        <div className='w-[22em] h-[35em] md:w-[50em] md:h-[510px] lg:w-[55em] flex items-center justify-center overflow-hidden'>
-            <swiper-container
-                space-between="20"
-                slides-per-view={largura > 900 ? 2 : 1}
-                navigation="false"
-                pagination="false"
-                loop="true"
-                autoplay="true"
-                speed="500"
-            >
-                {projectsCards.map((card) => (
-                    <swiper-slide key={card.title}>
-                        <div className='flex justify-center m-2 p-2'>
-                            <div className='flex flex-col items-center h-[500px] w-[26em] p-4 mb-2 rounded-lg bg-white dark:bg-black/80 drop-shadow-md relative'>
-                                <Image src={card.image.url} alt={card.image.alt} width={400} height={320} className='rounded-lg' />
+    return(
+        <div className='w-[22em] md:w-[26em] lg:w-[64em] h-[27em] md:h-[35em] lg:h-[25em] flex items-center justify-center relative group'>
+            <div className='w-[87%] bg-white dark:bg-black/80 h-[97%] rounded-md drop-shadow-md flex flex-col lg:flex-row items-center lg:justify-between'>
+                <div className='relative mt-4 w-[90%] h-[80%] md:h-[60%] lg:mt-0 lg:w-full lg:h-full'>
+                    <Image src={projectsCards[currentIndex].image.url} alt={projectsCards[currentIndex].image.alt} fill={true} className='rounded-md lg:rounded-r-none' />
+                </div>
+                <div className='flex flex-col items-center justify-center h-full md:w-[320px] lg:w-[445px]'>
+                    <h3 className={`${outfit.className} text-blue-950 dark:text-slate-100 font-semibold text-xl text-center my-2 md:my-4`}>{projectsCards[currentIndex].title}</h3>
+                    <span className='w-[90%] max-h-[7em] md:max-h-[9em] overflow-hidden dark:text-slate-50'>
+                        {projectsCards[currentIndex].description}
+                    </span>
 
-                                <div className='bg-white dark:bg-transparent pt-4 h-full flex flex-col justify-between items-center'>
-                                    <div>
-                                        <h3 className={`${outfit.className} text-blue-950 dark:text-slate-100 font-semibold text-xl text-center mb-4`}>
-                                            {card.title}
-                                        </h3>
-                                        <div className='max-h-[7em] w-[100%] overflow-hidden'>
-                                            <span className='dark:text-slate-50'>
-                                                {card.description}
-                                            </span>
-                                        </div>
-                                    </div>
-                                    {card.links.secondLink === "" ?
-                                        <div className='flex flex-row items-center justify-center w-[100%] mt-4'>
-                                            <Link href={card.links.firstLink} target='blank' className='w-full'>
-                                                <button className='w-full flex flex-row justify-center items-center gap-3 bg-slate-500 dark:bg-slate-50 border border-slate-500 dark:border-slate-50 text-slate-50 dark:text-slate-600 px-3 py-1 rounded drop-shadow duration-200 hover:bg-slate-500/80 dark:hover:bg-slate-50/80 hover:ease-in-out hover:scale-105'>
-                                                    <FaGithub size={19} />
-                                                    Github
-                                                </button>
-                                            </Link>
-                                        </div>
-                                        :
-                                        <div className='flex flex-row items-center justify-center gap-2 w-[100%] mt-4'>
-                                            <Link href={card.links.firstLink} target='blank'>
-                                                <button className='w-full px-7 flex flex-row justify-center items-center gap-3 bg-slate-500 dark:bg-slate-50 border border-slate-500 dark:border-slate-50 text-slate-50 dark:text-slate-600 py-1 rounded drop-shadow duration-200 hover:bg-slate-500/80 dark:hover:bg-slate-50/80 hover:ease-in-out hover:scale-105'>
-                                                    <FaGithub size={19} />
-                                                    Github
-                                                </button>
-                                            </Link>
-                                            <Link href={card.links.secondLink} target='blank'>
-                                                <button className='w-full flex flex-row justify-center items-center gap-3 bg-white dark:bg-transparent text-slate-500 dark:text-slate-50 px-3 py-1 rounded border border-slate-500 dark:border-slate-50 drop-shadow duration-200 hover:text-slate-500/80 dark:hover:text-slate-50/80 hover:border-slate-500/80 dark:hover:border-slate-50/80 hover:ease-in-out hover:scale-105'>
-                                                    <GoLinkExternal size={19} />
-                                                    Live demo
-                                                </button>
-                                            </Link>
-                                        </div>
-                                    }
-                                </div>
-                            </div>
+                    {projectsCards[currentIndex].links.secondLink === "" ?
+                        <div className='flex items-center justify-center w-[90%] mt-auto mb-6'>
+                            <Link href={projectsCards[currentIndex].links.firstLink} target='blank' className='w-full'>
+                                <button className='w-full flex flex-row justify-center items-center gap-2 bg-[#6e6ad2] border border-[#6e6ad2] text-white px-3 py-1 rounded drop-shadow duration-200 hover:bg-[#6e6ad2]/80 hover:ease-in-out hover:scale-105'>
+                                    <FaGithub size={19} />
+                                    Github
+                                </button>
+                            </Link>
                         </div>
-                    </swiper-slide>
-                ))}
-            </swiper-container>
+                        :
+                        <div className='flex items-center justify-center w-[90%] mt-auto mb-6 gap-4 md:gap-2'>
+                            <Link href={projectsCards[currentIndex].links.firstLink} target='blank'>
+                                <button className='w-full min-w-[135px] flex flex-row justify-center items-center gap-2 bg-[#6e6ad2] border border-[#6e6ad2] text-slate-50 px-3 py-1 rounded drop-shadow duration-200 hover:bg-[#6e6ad2]/80 hover:ease-in-out hover:scale-105'>
+                                    <FaGithub size={19} />
+                                    Github
+                                </button>
+                            </Link>
+
+                            <Link href={projectsCards[currentIndex].links.secondLink} target='blank'>
+                                <button className='w-full min-w-[135px] md:min-w flex flex-row justify-center items-center gap-2 bg-white dark:bg-transparent text-[#6e6ad2] dark:text-white px-3 py-1 rounded border border-[#6e6ad2] drop-shadow duration-200 hover:text-[#6e6ad2]/80 hover:border-[#6e6ad2]/80 hover:ease-in-out hover:scale-105'>
+                                    <GoLinkExternal size={19} />
+                                    Live demo
+                                </button>
+                            </Link>
+                        </div>
+                    }
+                </div>
+            </div>
+
+            <div className='group:block md:hidden md:group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] -left-4 lg:left-4 text-xl p-2 text-[#6e6ad2] cursor-pointer'>
+                <BsChevronCompactLeft onClick={prevSlide} size={30} />
+            </div>
+            <div className='group:block md:hidden md:group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] -right-4 lg:right-4 text-xl p-2 text-[#6e6ad2] cursor-pointer'>
+                <BsChevronCompactRight onClick={nextSlide} size={30} />
+            </div>
         </div>
     )
 }
