@@ -38,8 +38,10 @@ export default function Homepage() {
             </div>
 
             <div className="bg-violet-50 dark:bg-violet-900/20 text-slate-500 dark:text-slate-50 rounded-3xl w-[24em] md:w-[25em] px-8 py-1 absolute bottom-20 drop-shadow text-sm md:text-base flex flex-row justify-center items-center gap-3">
-                <span className="relative w-3 h-3 rounded-xl bg-green-500"></span>
-                <span className="absolute left-[2.7em] md:left-[3.3em] opacity-75 animate-ping w-3 h-3 rounded-xl bg-green-500"></span>
+                <span class="relative flex h-3 w-3">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                </span>
                 <p>Disponível para trabalhos freelance!</p>
             </div>
         </div>
