@@ -7,13 +7,17 @@ import { FaGithub } from 'react-icons/fa'
 import { GoLinkExternal } from 'react-icons/go'
 import { useState } from 'react'
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs'
+import cripto from '../../../public/images/cripto.png'
+import habits from '../../../public/images/habits.png'
+import finans from '../../../public/images/finans.png'
+import dtmoney from '../../../public/images/dtmoney.png'
 
 const outfit = Outfit({
   subsets: ['latin'],
 })
 
 export default function Carousel() {
-  const [currentIndex, setCurrentIndex] = useState(2)
+  const [currentIndex, setCurrentIndex] = useState(0)
 
   const prevSlide = () => {
     const isFirstSlide = currentIndex === 0;
@@ -27,11 +31,22 @@ export default function Carousel() {
     setCurrentIndex(newIndex);
   };
 
+  const selectImage = (index) => {
+    const images = [
+      cripto,
+      habits,
+      finans,
+      dtmoney
+    ];
+
+    return images[index]
+  }
+
   return(
     <div className='w-[22em] md:w-[26em] lg:w-[64em] h-[27em] md:h-[35em] lg:h-[25em] flex items-center justify-center relative group'>
       <div className='w-[87%] bg-white dark:bg-black/80 h-[97%] rounded-md drop-shadow-md flex flex-col lg:flex-row items-center lg:justify-between'>
         <div className='relative mt-4 w-[90%] h-[80%] md:h-[60%] lg:mt-0 lg:w-full lg:h-full'>
-          <Image src={projectsCards[currentIndex].image.url} alt={projectsCards[currentIndex].image.alt} fill={true} className='rounded-md lg:rounded-r-none' />
+          <Image src={selectImage(currentIndex)} alt={projectsCards[currentIndex].image.alt} fill={true} className='rounded-md lg:rounded-r-none' />
         </div>
         <div className='flex flex-col items-center justify-center h-full md:w-[320px] lg:w-[445px]'>
           <h3 className={`${outfit.className} text-blue-950 dark:text-slate-100 font-semibold text-xl text-center my-2 md:my-4`}>{projectsCards[currentIndex].title}</h3>
