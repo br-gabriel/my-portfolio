@@ -19,7 +19,7 @@ export default function Homepage() {
       </div>
 
       <p className="text-slate-600 dark:text-slate-100 font-light text-center text-sm md:text-base max-w-lg leading-5 mt-8">
-        Me chamo Gabriel Feitosa e sou desenvolvedor React, Node e React Native, saiba mais sobre mim.
+        Me chamo Gabriel Feitosa e sou desenvolvedor React, Node e React Native, saiba mais sobre mim abaixo.
       </p>
 
       <div className="flex flex-col md:flex-row gap-4 mt-8">
