@@ -12,7 +12,7 @@ const outfit = Outfit({
 export default function Aboutme() {   
   return (
     <div id="aboutMe" className="w-full h-full flex flex-col items-center">
-      <section className="bg-white dark:bg-black/60 w-full h-full md:h-[450px] mt-0 md:mt-36 flex flex-col items-center justify-center drop-shadow">
+      <section className="bg-white dark:bg-black/60 w-full h-full md:h-[55vh] mt-0 md:mt-36 flex flex-col items-center justify-center drop-shadow">
         <div className="max-w-7xl w-full px-4 py-8 flex flex-col md:flex-row items-center justify-center gap-12">
           <div className="w-[235px] md:min-w-[335px] dark:hidden">
             <Image src={profilePicLight} alt="foto de perfil" width={335} />
@@ -28,11 +28,11 @@ export default function Aboutme() {
             </h3>
 
             <p className="text-justify text-sm md:text-base dark:text-slate-50">
-              Meu nome é Gabriel Silva Feitosa, tenho 25 anos e sou apaixonado por tecnologia e programação.
+              Meu nome é Gabriel Silva Feitosa, sou apaixonado por tecnologia e programação. Atualmente estou me formando em Ciência da Computação.
             </p>
 
             <p className="text-justify text-sm md:text-base dark:text-slate-50">
-              Sou Desenvolvedor Web com foco em desenvolvimento front-end. Gosto de criar interfaces e transforma-las em código, buscando sempre um equilíbrio entre beleza e boa performance.
+              Sou Desenvolvedor Web com foco em front-end. Gosto de criar interfaces e transforma-las em código, buscando sempre um equilíbrio entre beleza e boa performance.
             </p>
 
             <p className="text-justify text-sm md:text-base dark:text-slate-50">
