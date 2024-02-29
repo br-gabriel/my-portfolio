@@ -1,5 +1,5 @@
 import { Outfit } from 'next/font/google'
-import Carousel from './Carousel'
+import NewCarousel from './NewCarousel'
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -7,7 +7,7 @@ const outfit = Outfit({
 
 export default function Projects() {
   return (
-    <section id="projects" className="mt-20 w-full h-screen flex flex-col items-center justify-start">
+    <section id="projects" className="mt-20 w-full h-full md:h-[100vh] flex flex-col items-center justify-start">
       <div className="mt-20 md:mt-12 flex flex-col items-center">
         <span
           className={`${outfit.className} font-semibold text-[#6e6ad2] mb-2`}
@@ -21,8 +21,8 @@ export default function Projects() {
           Projetos recentes
         </h3>
       </div>
-      <div className="mt-5 md:mt-20 w-7xl overflow-x-hidden">
-        <Carousel className="flex flex-row items-center justify-center" />
+      <div className="mt-5 md:mt-20 w-full max-w-4xl h-full p-2 overflow-hidden">
+        <NewCarousel />
       </div>
     </section>
   )
