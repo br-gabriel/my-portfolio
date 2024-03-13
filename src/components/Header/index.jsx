@@ -51,12 +51,12 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link to="aboutMe" smooth={true} duration={1000} className="relative cursor-pointer px-1 after:content-[''] after:absolute after:bg-violet-500 after:w-[0px] after:h-[3px] after:bottom-[-10px] after:left-0 after:rounded-full after:transition-all after:duration-200 after:ease-in-out hover:after:w-full">
+              <Link to="aboutMe" smooth={true} offset={-50} duration={1000} className="relative cursor-pointer px-1 after:content-[''] after:absolute after:bg-violet-500 after:w-[0px] after:h-[3px] after:bottom-[-10px] after:left-0 after:rounded-full after:transition-all after:duration-200 after:ease-in-out hover:after:w-full">
                 Sobre mim
               </Link>
             </li>
             <li>
-              <Link to="projects" offset={-70} smooth={true} duration={1000} className="relative cursor-pointer px-1 after:content-[''] after:absolute after:bg-violet-500 after:w-[0px] after:h-[3px] after:bottom-[-10px] after:left-0 after:rounded-full after:transition-all after:duration-200 after:ease-in-out hover:after:w-full">
+              <Link to="projects" offset={-100} smooth={true} duration={1000} className="relative cursor-pointer px-1 after:content-[''] after:absolute after:bg-violet-500 after:w-[0px] after:h-[3px] after:bottom-[-10px] after:left-0 after:rounded-full after:transition-all after:duration-200 after:ease-in-out hover:after:w-full">
                 Projetos
               </Link>
             </li>
