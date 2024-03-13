@@ -7,8 +7,8 @@ const outfit = Outfit({
 
 export default function Projects() {
   return (
-    <section id="projects" className="mt-20 w-full h-full md:h-[100vh] flex flex-col items-center justify-start">
-      <div className="mt-20 md:mt-12 flex flex-col items-center">
+    <section id="projects" className="mt-20 w-full h-full md:h-[90vh] flex flex-col items-center justify-start">
+      <div className="mt-20 md:mt-16 flex flex-col items-center">
         <span
           className={`${outfit.className} font-semibold text-[#6e6ad2] mb-2`}
         >
@@ -21,7 +21,7 @@ export default function Projects() {
           Projetos recentes
         </h3>
       </div>
-      <div className="mt-5 md:mt-20 w-full max-w-4xl h-full p-2 overflow-hidden">
+      <div className="mt-5 md:mt-20 w-full max-w-4xl p-2 overflow-hidden">
         <NewCarousel />
       </div>
     </section>
