@@ -26,15 +26,15 @@ export default function NewCarousel() {
         }}>
 
         <SwiperSlide>
-          <div className="w-full min-h-[359px] flex flex-row items-center justify-center">
-            <div className="w-4/6 min-h-[359px]">
-              <Image src={cripto} alt="Banner do aplicativo cripto tracker" className="rounded-l-lg" />
+          <div className="w-full flex flex-col md:flex-row justify-center">
+            <div className="md:w-4/6 h-full">
+              <Image src={cripto} alt="Banner do aplicativo cripto tracker" className="h-full rounded-t-lg md:rounded-t-none md:rounded-l-lg" />
             </div>
 
-            <div className="w-2/6 flex flex-col items-center justify-between min-h-[359px] rounded-r-lg bg-white dark:bg-black/70">
+            <div className="md:w-2/6 flex flex-col items-center justify-between min-h-[250px] rounded-b-lg md:rounded-b-none md:rounded-r-lg bg-white dark:bg-black/70">
               <div className="flex flex-col items-center">
                 <h3
-                  className={`${outfit.className} my-2 text-center text-xl font-semibold text-blue-950 dark:text-slate-100 md:my-4`}
+                  className={`${outfit.className} my-3 text-center text-xl font-semibold text-blue-950 dark:text-slate-100 md:my-4`}
                 >
                   Cripto Tracker App
                 </h3>
@@ -57,15 +57,15 @@ export default function NewCarousel() {
         </SwiperSlide>
 
         <SwiperSlide>
-          <div className="w-full min-h-[359px] flex flex-row items-center justify-center">
-            <div className="w-4/6 min-h-[359px]">
-              <Image src={habits} alt="Banner do aplicativo habits" className="rounded-l-lg" />
+          <div className="w-full flex flex-col md:flex-row justify-center">
+            <div className="md:w-4/6 h-full">
+              <Image src={habits} alt="Banner do aplicativo habits" className="h-full rounded-t-lg md:rounded-t-none md:rounded-l-lg" />
             </div>
 
-            <div className="w-2/6 flex flex-col items-center justify-between min-h-[359px] rounded-r-lg bg-white dark:bg-black/70">
+            <div className="md:w-2/6 flex flex-col items-center justify-between min-h-[250px] rounded-b-lg md:rounded-b-none md:rounded-r-lg bg-white dark:bg-black/70">
               <div className="flex flex-col items-center">
                 <h3
-                  className={`${outfit.className} my-2 text-center text-xl font-semibold text-blue-950 dark:text-slate-100 md:my-4`}
+                  className={`${outfit.className} my-3 text-center text-xl font-semibold text-blue-950 dark:text-slate-100 md:my-4`}
                 >
                   Habit App
                 </h3>
@@ -87,15 +87,15 @@ export default function NewCarousel() {
         </SwiperSlide>
 
         <SwiperSlide>
-          <div className="w-full min-h-[359px] flex flex-row items-center justify-center">
-            <div className="w-4/6 min-h-[359px]">
-              <Image src={finans} alt="Banner do site finans" className="rounded-l-lg" />
+          <div className="w-full flex flex-col md:flex-row justify-center">
+            <div className="md:w-4/6 h-full">
+              <Image src={finans} alt="Banner do site finans" className="h-full rounded-t-lg md:rounded-t-none md:rounded-l-lg" />
             </div>
 
-            <div className="w-2/6 flex flex-col items-center justify-between min-h-[359px] rounded-r-lg bg-white dark:bg-black/70">
+            <div className="md:w-2/6 flex flex-col items-center justify-between min-h-[250px] rounded-b-lg md:rounded-b-none md:rounded-r-lg bg-white dark:bg-black/70">
               <div className="flex flex-col items-center">
                 <h3
-                  className={`${outfit.className} my-2 text-center text-xl font-semibold text-blue-950 dark:text-slate-100 md:my-4`}
+                  className={`${outfit.className} my-3 text-center text-xl font-semibold text-blue-950 dark:text-slate-100 md:my-4`}
                 >
                   Site Finans
                 </h3>
@@ -104,18 +104,18 @@ export default function NewCarousel() {
                 </p>
               </div>
 
-              <div className="flex items-center justify-center w-[90%] mt-auto mb-6 gap-4 md:gap-2">
+              <div className="w-[90%] flex items-center justify-center  mt-auto mb-6 gap-2">
                 <Link href={"https://github.com/br-gabriel/Site-com-bootstrap-4"} target='blank' className="w-full">
-                <button className="w-full min-w-[135px] flex flex-row justify-center items-center gap-2 bg-[#6e6ad2] border border-[#6e6ad2] text-slate-50 px-3 py-1 rounded drop-shadow duration-200 hover:bg-[#6e6ad2]/80 hover:ease-in-out hover:scale-105">
+                <button className="w-full flex flex-row justify-center items-center gap-2 bg-[#6e6ad2] border border-[#6e6ad2] text-slate-50 px-3 py-1 rounded drop-shadow duration-200 hover:bg-[#6e6ad2]/80 hover:ease-in-out hover:scale-105">
                   <FaGithub size={19} />
                   Github
                 </button>
                 </Link>
 
                 <Link href={"https://br-gabriel.github.io/Site-com-bootstrap-4/"} target='blank' className="w-full">
-                <button className="w-full min-w-[135px] md:min-w flex flex-row justify-center items-center gap-2 bg-white dark:bg-transparent text-[#6e6ad2] dark:text-white px-3 py-1 rounded border border-[#6e6ad2] drop-shadow duration-200 hover:text-[#6e6ad2]/80 hover:border-[#6e6ad2]/80 hover:ease-in-out hover:scale-105">
+                <button className="w-full flex flex-row justify-center items-center gap-2 bg-white dark:bg-transparent text-[#6e6ad2] dark:text-white px-3 py-1 rounded border border-[#6e6ad2] drop-shadow duration-200 hover:text-[#6e6ad2]/80 hover:border-[#6e6ad2]/80 hover:ease-in-out hover:scale-105">
                   <GoLinkExternal size={19} />
-                  Live demo
+                  Demo
                 </button>
                 </Link>
               </div>
@@ -124,15 +124,15 @@ export default function NewCarousel() {
         </SwiperSlide>
 
         <SwiperSlide>
-          <div className="w-full min-h-[359px] flex flex-row items-center justify-center">
-            <div className="w-4/6 min-h-[359px]">
-              <Image src={dtmoney} alt="Banner do site de gestor de finanças" className="rounded-l-lg" />
+          <div className="w-full flex flex-col md:flex-row justify-center">
+            <div className="md:w-4/6 h-full">
+              <Image src={dtmoney} alt="Banner do site de gestor de finanças" className="h-full rounded-t-lg md:rounded-t-none md:rounded-l-lg" />
             </div>
 
-            <div className="w-2/6 flex flex-col items-center justify-between min-h-[359px] rounded-r-lg bg-white dark:bg-black/70">
+            <div className="md:w-2/6 flex flex-col items-center justify-between min-h-[250px] rounded-b-lg md:rounded-b-none md:rounded-r-lg bg-white dark:bg-black/70">
               <div className="flex flex-col items-center">
                 <h3
-                  className={`${outfit.className} my-2 text-center text-xl font-semibold text-blue-950 dark:text-slate-100 md:my-4`}
+                  className={`${outfit.className} my-3 text-center text-xl font-semibold text-blue-950 dark:text-slate-100 md:my-4`}
                 >
                   Gestor Financeiro
                 </h3>
@@ -141,18 +141,18 @@ export default function NewCarousel() {
                 </p>
               </div>
 
-              <div className="flex items-center justify-center w-[90%] mt-auto mb-6 gap-4 md:gap-2">
+              <div className="w-[90%] flex items-center justify-center  mt-auto mb-6 gap-2">
                 <Link href={"https://github.com/br-gabriel/dtmoney-finance"} target='blank' className="w-full">
-                <button className="w-full min-w-[135px] flex flex-row justify-center items-center gap-2 bg-[#6e6ad2] border border-[#6e6ad2] text-slate-50 px-3 py-1 rounded drop-shadow duration-200 hover:bg-[#6e6ad2]/80 hover:ease-in-out hover:scale-105">
+                <button className="w-full flex flex-row justify-center items-center gap-2 bg-[#6e6ad2] border border-[#6e6ad2] text-slate-50 px-3 py-1 rounded drop-shadow duration-200 hover:bg-[#6e6ad2]/80 hover:ease-in-out hover:scale-105">
                   <FaGithub size={19} />
                   Github
                 </button>
                 </Link>
 
                 <Link href={"https://effulgent-crepe-8e024f.netlify.app"} target='blank' className="w-full">
-                <button className="w-full min-w-[135px] md:min-w flex flex-row justify-center items-center gap-2 bg-white dark:bg-transparent text-[#6e6ad2] dark:text-white px-3 py-1 rounded border border-[#6e6ad2] drop-shadow duration-200 hover:text-[#6e6ad2]/80 hover:border-[#6e6ad2]/80 hover:ease-in-out hover:scale-105">
+                <button className="w-full flex flex-row justify-center items-center gap-2 bg-white dark:bg-transparent text-[#6e6ad2] dark:text-white px-3 py-1 rounded border border-[#6e6ad2] drop-shadow duration-200 hover:text-[#6e6ad2]/80 hover:border-[#6e6ad2]/80 hover:ease-in-out hover:scale-105">
                   <GoLinkExternal size={19} />
-                  Live demo
+                  Demo
                 </button>
                 </Link>
               </div>
