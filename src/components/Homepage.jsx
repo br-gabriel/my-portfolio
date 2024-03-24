@@ -14,7 +14,7 @@ export default function Homepage() {
           Seu próximo
         </h1>
         <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-fuchsia-500 text-5xl md:text-6xl font-black text-center mt-4">
-          Desenvolvedor Front-end
+          Desenvolvedor Full Stack
         </h1>
       </div>
 
