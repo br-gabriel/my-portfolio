@@ -39,7 +39,7 @@ export default function Aboutme() {
               Além disso, estou expandindo meus conhecimentos para o mundo back-end e mobile por meio do NodeJS e React Native.
             </p>
 
-            <Link href="/Frontend-Gabriel-Feitosa.pdf" target="blank">
+            <Link href="/Fullstack-Gabriel-Feitosa.pdf" target="blank">
               <button className="w-32 px-4 py-2 bg-[#6e6ad2] text-slate-50 rounded drop-shadow flex flex-row justify-center gap-2 duration-200 hover:bg-[#6e6ad2]/80 hover:text-white hover:ease-in-out hover:scale-105">
                 Currículo
               </button>
