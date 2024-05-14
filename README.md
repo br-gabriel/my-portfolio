@@ -1,4 +1,4 @@
-Link: [Portfolio](https://my-portfolio-vxko-git-main-br-gabriel.vercel.app)
+Link: [Portfolio](https://my-portfolio-vxko.vercel.app)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
