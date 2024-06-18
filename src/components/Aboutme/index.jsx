@@ -19,6 +19,7 @@ export default function Aboutme() {
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0}}
+            viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
             <div className="w-[235px] dark:hidden md:min-w-[335px]">
@@ -35,6 +36,7 @@ export default function Aboutme() {
               className={`${outfit.className} text-center text-3xl font-semibold text-[#6e6ad2] md:text-left`}
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
               Sobre mim
@@ -43,6 +45,7 @@ export default function Aboutme() {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{ delay: 0.6 }}
               className="text-justify text-sm dark:text-slate-50 md:text-base"
             >
@@ -54,6 +57,7 @@ export default function Aboutme() {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{ delay: 0.9 }}
               className="text-justify text-sm dark:text-slate-50 md:text-base"
             >
@@ -65,6 +69,7 @@ export default function Aboutme() {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{ delay: 1.2 }}
               className="text-justify text-sm dark:text-slate-50 md:text-base"
             >
@@ -76,6 +81,7 @@ export default function Aboutme() {
               <motion.button
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ delay: 1.5 }}
                 className="flex w-32 flex-row justify-center gap-2 rounded bg-[#6e6ad2] px-4 py-2 text-slate-50 drop-shadow duration-200 hover:scale-105 hover:bg-[#6e6ad2]/80 hover:text-white hover:ease-in-out"
               >

@@ -23,6 +23,7 @@ export default function Footer() {
         <motion.h3 
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
         transition={{ duration: 0.15 }}
         className={`${outfit.className} text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-violet-500 to-violet-500`}
         >
@@ -33,6 +34,7 @@ export default function Footer() {
           <motion.li 
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.15, delay: 0.2 }}
           className="flex flex-row gap-4"
           >
@@ -45,6 +47,7 @@ export default function Footer() {
           <motion.li 
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.15, delay: 0.3 }}
           className="flex flex-row gap-4"
           >
@@ -57,6 +60,7 @@ export default function Footer() {
           <motion.li 
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.15, delay: 0.4 }}
           className="flex flex-row gap-4"
           >

@@ -17,6 +17,7 @@ export default function Projects() {
         <motion.span
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.5 }}
           className={`${outfit.className} mb-2 font-semibold text-[#6e6ad2]`}
         >
@@ -26,6 +27,7 @@ export default function Projects() {
         <motion.h3
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.5 }}
           className={`${outfit.className} text-2xl font-semibold text-blue-950 dark:text-slate-50 md:text-3xl`}
         >

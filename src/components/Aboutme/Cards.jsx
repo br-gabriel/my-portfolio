@@ -11,6 +11,7 @@ export default function Cards() {
       <motion.div 
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 1.5 }}
         className="bg-white dark:bg-black text-black dark:text-white rounded-md p-4 w-full min-w-[270px] max-w-[300px] md:max-w-[360px] min-h-[120px] flex items-center justify-center snap-center"
       >
@@ -23,6 +24,7 @@ export default function Cards() {
       <motion.div 
       initial={{ opacity: 0, x: -100 }}
       whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
       transition={{ duration: 0.5, delay: 2 }}
         className="bg-white dark:bg-black text-black dark:text-white rounded-md p-4 w-full min-w-[270px] max-w-[300px] md:max-w-[360px] min-h-[120px] flex items-center justify-center snap-center"
       >
@@ -35,6 +37,7 @@ export default function Cards() {
       <motion.div 
       initial={{ opacity: 0, x: -100 }}
       whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
       transition={{ duration: 0.5, delay: 2.5 }}
         className="bg-white dark:bg-black text-black dark:text-white rounded-md p-4 w-full min-w-[270px] max-w-[300px] md:max-w-[360px] min-h-[120px] flex items-center justify-center snap-center"
       >
