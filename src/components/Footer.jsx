@@ -14,6 +14,7 @@ const outfit = Outfit({
 export default function Footer() {   
   const handleCopyText = () => {
     navigator.clipboard.writeText("contato.gabrielfeitosa@gmail.com")
+    alert("E-mail copiado!")
   }
   
   return (
