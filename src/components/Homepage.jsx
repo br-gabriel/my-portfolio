@@ -1,4 +1,6 @@
+"use client"
 import Link from "next/link"
+import { motion } from "framer-motion"
 import { Outfit } from "next/font/google"
 import { FaLinkedin, FaGithub } from "react-icons/fa"
 
@@ -8,42 +10,81 @@ const outfit = Outfit({
 
 export default function Homepage() {
   return (
-    <div id="home" className="h-screen flex flex-col justify-center items-center relative">
+    <div
+      id="home"
+      className="relative flex h-screen flex-col items-center justify-center"
+    >
       <div className={outfit.className}>
-        <h1 className="text-blue-950 dark:text-slate-50 text-5xl md:text-6xl font-semibold text-center">
+        <motion.h1
+          className="text-center text-5xl font-semibold text-blue-950 dark:text-slate-50 md:text-6xl"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           Seu próximo
-        </h1>
-        <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-fuchsia-500 text-5xl md:text-6xl font-black text-center mt-4">
+        </motion.h1>
+        <motion.h1
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="mt-4 bg-gradient-to-r from-blue-500 to-fuchsia-500 bg-clip-text text-center text-5xl font-black text-transparent md:text-6xl"
+        >
           Desenvolvedor Full Stack
-        </h1>
+        </motion.h1>
       </div>
 
-      <p className="text-slate-600 dark:text-slate-100 font-light text-center text-sm md:text-base max-w-lg leading-5 mt-8">
-        Me chamo Gabriel Feitosa e sou desenvolvedor React, Node e React Native, saiba mais sobre mim abaixo.
-      </p>
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 1 }}
+        className="mt-8 max-w-lg text-center text-sm font-light leading-5 text-slate-600 dark:text-slate-100 md:text-base"
+      >
+        Me chamo Gabriel Feitosa e sou desenvolvedor React, Node e React Native,
+        saiba mais sobre mim abaixo.
+      </motion.p>
 
-      <div className="flex flex-col md:flex-row gap-4 mt-8">
-        <Link href="https://www.linkedin.com/in/gabriel-silva-feitosa/" target="blank">
-          <button className="w-36 flex flex-row justify-center items-center gap-3 bg-slate-600 dark:bg-slate-50 border border-slate-500 dark:border-slate-50 text-slate-50 dark:text-slate-600 px-3 py-1 rounded drop-shadow duration-200 hover:bg-slate-500/80 dark:hover:bg-slate-50/80 dark:hover:border-slate-50/80 hover:ease-in-out hover:scale-105">
+      <div className="mt-8 flex flex-col gap-4 md:flex-row">
+        <Link
+          href="https://www.linkedin.com/in/gabriel-silva-feitosa/"
+          target="blank"
+        >
+          <motion.button
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            whileHover={{ scale: 1.05 }}
+            transition={{ delay: 1.2 }}
+            className="flex w-36 flex-row items-center justify-center gap-3 rounded border border-slate-500 bg-slate-600 px-3 py-1 text-slate-50 drop-shadow duration-200 hover:scale-105 hover:bg-slate-500/80 hover:ease-in-out dark:border-slate-50 dark:bg-slate-50 dark:text-slate-600 dark:hover:border-slate-50/80 dark:hover:bg-slate-50/80"
+          >
             <FaLinkedin size={19} />
             Linkedin
-          </button>
+          </motion.button>
         </Link>
         <Link href="https://github.com/br-gabriel" target="blank">
-          <button className="w-36 flex flex-row justify-center items-center gap-3 bg-white dark:bg-transparent text-slate-500 dark:text-slate-50 px-3 py-1 rounded border border-slate-500 dark:border-slate-50 drop-shadow duration-200 hover:text-slate-500/80 dark:hover:text-slate-50/80 hover:border-slate-500/80 dark:hover:border-slate-50/80 hover:ease-in-out hover:scale-105">
+          <motion.button
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            whileHover={{ scale: 1.05 }}
+            transition={{ delay: 1.4 }}
+            className="flex w-36 flex-row items-center justify-center gap-3 rounded border border-slate-500 bg-white px-3 py-1 text-slate-500 drop-shadow duration-200 hover:scale-105 hover:border-slate-500/80 hover:text-slate-500/80 hover:ease-in-out dark:border-slate-50 dark:bg-transparent dark:text-slate-50 dark:hover:border-slate-50/80 dark:hover:text-slate-50/80"
+          >
             <FaGithub size={19} />
             Github
-          </button>
+          </motion.button>
         </Link>
       </div>
 
-      <div className="bg-violet-50 dark:bg-violet-900/20 text-slate-500 dark:text-slate-50 rounded-3xl w-[24em] md:w-[25em] px-8 py-1 absolute bottom-20 drop-shadow text-sm md:text-base flex flex-row justify-center items-center gap-3">
+      <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.8 }}
+        className="absolute bottom-20 flex w-[24em] flex-row items-center justify-center gap-3 rounded-3xl bg-violet-50 px-8 py-1 text-sm text-slate-500 drop-shadow dark:bg-violet-900/20 dark:text-slate-50 md:w-[25em] md:text-base"
+      >
         <span className="relative flex h-3 w-3">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-          <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
+          <span className="relative inline-flex h-3 w-3 rounded-full bg-green-500"></span>
         </span>
         <p>Disponível para trabalhos freelance!</p>
-      </div>
+      </motion.div>
     </div>
-  )
+  );
 }
