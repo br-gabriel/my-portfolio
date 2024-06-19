@@ -19,14 +19,14 @@ export default function Homepage() {
           className="text-center text-5xl font-semibold text-blue-950 dark:text-slate-50 md:text-6xl"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.15, delay: 0.1 }}
         >
           Seu próximo
         </motion.h1>
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
+          transition={{ duration: 0.15, delay: 0.3 }}
           className="mt-4 bg-gradient-to-r from-blue-500 to-fuchsia-500 bg-clip-text text-center text-5xl font-black text-transparent md:text-6xl"
         >
           Desenvolvedor Full Stack
@@ -34,9 +34,9 @@ export default function Homepage() {
       </div>
 
       <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 1 }}
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.15, delay: 0.5 }}
         className="mt-8 max-w-lg text-center text-sm font-light leading-5 text-slate-600 dark:text-slate-100 md:text-base"
       >
         Me chamo Gabriel Feitosa e sou desenvolvedor React, Node e React Native,
@@ -52,7 +52,7 @@ export default function Homepage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             whileHover={{ scale: 1.05 }}
-            transition={{ delay: 1.2 }}
+            transition={{ delay: 0.7 }}
             className="flex w-36 flex-row items-center justify-center gap-3 rounded border border-slate-500 bg-slate-600 px-3 py-1 text-slate-50 drop-shadow duration-200 hover:scale-105 hover:bg-slate-500/80 hover:ease-in-out dark:border-slate-50 dark:bg-slate-50 dark:text-slate-600 dark:hover:border-slate-50/80 dark:hover:bg-slate-50/80"
           >
             <FaLinkedin size={19} />
@@ -64,7 +64,7 @@ export default function Homepage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             whileHover={{ scale: 1.05 }}
-            transition={{ delay: 1.4 }}
+            transition={{ delay: 0.9 }}
             className="flex w-36 flex-row items-center justify-center gap-3 rounded border border-slate-500 bg-white px-3 py-1 text-slate-500 drop-shadow duration-200 hover:scale-105 hover:border-slate-500/80 hover:text-slate-500/80 hover:ease-in-out dark:border-slate-50 dark:bg-transparent dark:text-slate-50 dark:hover:border-slate-50/80 dark:hover:text-slate-50/80"
           >
             <FaGithub size={19} />
@@ -76,7 +76,7 @@ export default function Homepage() {
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.8 }}
+        transition={{ delay: 1.1 }}
         className="absolute bottom-20 flex w-[24em] flex-row items-center justify-center gap-3 rounded-3xl bg-violet-50 px-8 py-1 text-sm text-slate-500 drop-shadow dark:bg-violet-900/20 dark:text-slate-50 md:w-[25em] md:text-base"
       >
         <span className="relative flex h-3 w-3">
