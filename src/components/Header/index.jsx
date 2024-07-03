@@ -4,7 +4,7 @@ import { Link, animateScroll as scroll } from 'react-scroll'
 import { Outfit } from "next/font/google"
 import { BiMenu } from "react-icons/bi"
 import { useCallback, useEffect, useState } from "react"
-import Menu from "./Menu"
+import ResponsiveMenu from "./ResponsiveMenu"
 import ThemeSwitchBtn from './ThemeSwitch'
 
 const outfit = Outfit({
@@ -80,7 +80,7 @@ export default function Header() {
           <BiMenu className="fill-[#6e6ad2] w-8 h-8" />
         </button>
 
-        <Menu isVisible={isMenuOpen} onClose={closeMenu} />
+        <ResponsiveMenu isVisible={isMenuOpen} onClose={closeMenu} />
       </div>
     </motion.header>
   )

@@ -6,7 +6,7 @@ const outfit = Outfit({
   subsets: ['latin']
 })
 
-export default function Menu({ isVisible, onClose }) {
+export default function ResponsiveMenu({ isVisible, onClose }) {
   return (
     <div onClick={onClose} className={`${isVisible ? 'flex' : 'hidden'} fixed bg-black/50 inset-0 w-screen h-screen md:hidden`}>
       <div onClick={(e) => e.stopPropagation()} className="w-[80%] h-screen fixed right-0 shadow-md px-5 py-8 bg-gradient-to-b from-[#E6E7FF] dark:from-[#1F1E3B] to-[#e6ecffec] dark:to-[#1E323B]">
