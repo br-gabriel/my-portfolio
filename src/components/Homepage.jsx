@@ -51,7 +51,6 @@ export default function Homepage() {
           <motion.button
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            whileHover={{ scale: 1.05 }}
             transition={{ delay: 0.7 }}
             className="flex w-36 flex-row items-center justify-center gap-3 rounded border border-slate-500 bg-slate-600 px-3 py-1 text-slate-50 drop-shadow duration-200 hover:scale-105 hover:bg-slate-500/80 hover:ease-in-out dark:border-slate-50 dark:bg-slate-50 dark:text-slate-600 dark:hover:border-slate-50/80 dark:hover:bg-slate-50/80"
           >
@@ -63,7 +62,6 @@ export default function Homepage() {
           <motion.button
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            whileHover={{ scale: 1.05 }}
             transition={{ delay: 0.9 }}
             className="flex w-36 flex-row items-center justify-center gap-3 rounded border border-slate-500 bg-white px-3 py-1 text-slate-500 drop-shadow duration-200 hover:scale-105 hover:border-slate-500/80 hover:text-slate-500/80 hover:ease-in-out dark:border-slate-50 dark:bg-transparent dark:text-slate-50 dark:hover:border-slate-50/80 dark:hover:text-slate-50/80"
           >
