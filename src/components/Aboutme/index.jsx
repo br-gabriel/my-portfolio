@@ -24,11 +24,11 @@ export default function Aboutme() {
             viewport={{ once: true }}
             transition={{ duration: 0.2 }}
           >
-            <div className="w-[235px] dark:hidden md:min-w-[335px]">
+            <div className="w-[235px] inline-flex dark:hidden md:max-w-[335px] md:w-full">
               <Image src={profilePicLight} alt="foto de perfil" width={335} />
             </div>
 
-            <div className="hidden w-[235px] dark:inline md:min-w-[335px]">
+            <div className="hidden w-[235px] dark:inline-flex md:max-w-[335px] md:w-full">
               <Image src={profilePicDark} alt="foto de perfil" width={335} />
             </div>
           </motion.div>
