@@ -12,6 +12,8 @@ const outfit = Outfit({
 });
 
 export default function Aboutme() {
+  const baseDelay = 0.2;
+  
   return (
     <div id="aboutMe" className="flex h-full w-full flex-col items-center">
       <section className="mt-0 flex h-full w-full flex-col items-center justify-center bg-white drop-shadow dark:bg-black/60 md:mt-28 md:h-[55vh]">
@@ -37,7 +39,7 @@ export default function Aboutme() {
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+              transition={{ duration: 0.5, delay: baseDelay * 1 }}
             >
               Sobre mim
             </motion.h3>
@@ -46,7 +48,7 @@ export default function Aboutme() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.15, delay: 0.3 }}
+              transition={{ duration: 0.15, delay: baseDelay * 2 }}
               className="text-justify text-sm dark:text-slate-50 md:text-base"
             >
               Meu nome é Gabriel Silva Feitosa, sou apaixonado por tecnologia e
@@ -58,7 +60,7 @@ export default function Aboutme() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.15, delay: 0.5 }}
+              transition={{ duration: 0.15, delay: baseDelay * 3 }}
               className="text-justify text-sm dark:text-slate-50 md:text-base"
             >
               Sou Desenvolvedor Web com foco em front-end. Gosto de criar
@@ -70,7 +72,7 @@ export default function Aboutme() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.15, delay: 0.7 }}
+              transition={{ duration: 0.15, delay: baseDelay * 4 }}
               className="text-justify text-sm dark:text-slate-50 md:text-base"
             >
               Além disso, estou expandindo meus conhecimentos para o mundo
@@ -82,7 +84,7 @@ export default function Aboutme() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.15, delay: 0.9 }}
+                transition={{ duration: 0.15, delay: baseDelay * 5 }}
                 className="flex w-32 flex-row justify-center gap-2 rounded bg-[#6e6ad2] px-4 py-2 text-slate-50 drop-shadow duration-200 hover:scale-105 hover:bg-[#6e6ad2]/80 hover:text-white hover:ease-in-out"
               >
                 Currículo

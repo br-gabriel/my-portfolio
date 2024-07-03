@@ -19,12 +19,14 @@ const outfit = Outfit({
 });
 
 export default function NewCarousel() {
+  const baseDelay = 0.2;
+  
   return (
     <motion.div
       initial={{ opacity: 0, y: -50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ delay: 0.6 }}
+      transition={{ delay: baseDelay * 2 }}
     >
       <Swiper className="mySwiper rounded-lg" modules={[Autoplay]} loop={true} slidesPerView={1} spaceBetween={30} autoplay={{
           delay: 5000,
