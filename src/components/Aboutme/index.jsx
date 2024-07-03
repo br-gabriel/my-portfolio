@@ -52,8 +52,8 @@ export default function Aboutme() {
               className="text-justify text-sm dark:text-slate-50 md:text-base"
             >
               Meu nome é Gabriel Silva Feitosa, sou apaixonado por tecnologia e
-              programação. Atualmente estou me formando em Ciência da
-              Computação.
+              programação. Atualmente estou me formando em <b>Ciência da
+              Computação.</b>
             </motion.p>
 
             <motion.p
@@ -63,7 +63,7 @@ export default function Aboutme() {
               transition={{ duration: 0.15, delay: baseDelay * 3 }}
               className="text-justify text-sm dark:text-slate-50 md:text-base"
             >
-              Sou Desenvolvedor Web com foco em front-end. Gosto de criar
+              Sou <b>Desenvolvedor Web</b> com foco em <b>front-end.</b> Gosto de criar
               interfaces e transforma-las em código, buscando sempre um
               equilíbrio entre beleza e boa performance.
             </motion.p>
@@ -75,8 +75,7 @@ export default function Aboutme() {
               transition={{ duration: 0.15, delay: baseDelay * 4 }}
               className="text-justify text-sm dark:text-slate-50 md:text-base"
             >
-              Além disso, estou expandindo meus conhecimentos para o mundo
-              back-end e mobile por meio do NodeJS e React Native.
+              Além disso, estou expandindo meus conhecimentos para o mundo <b>back-end</b> e <b>mobile</b> por meio do <b>NodeJS</b> e <b>React Native.</b>
             </motion.p>
 
             <Link href="/Fullstack-Gabriel-Feitosa.pdf" target="blank">
