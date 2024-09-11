@@ -22,7 +22,7 @@ export default function Aboutme() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0}}
             viewport={{ once: true }}
-            transition={{ duration: 0.2 }}
+            transition={{ duration: 0.15 }}
           >
             <div className="w-[235px] inline-flex dark:hidden md:max-w-[335px] md:w-full">
               <Image src={profilePicLight} alt="foto de perfil" width={335} />
@@ -33,13 +33,13 @@ export default function Aboutme() {
             </div>
           </motion.div>
 
-          <div className="flex max-w-2xl flex-col gap-5 pr-4">
+          <div className="flex max-w-2xl flex-col gap-5 pr-4 will-change-transform">
             <motion.h3
               className={`${outfit.className} text-center text-3xl font-semibold text-[#6e6ad2] md:text-left`}
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: baseDelay * 1 }}
+              transition={{ duration: 0.15, delay: baseDelay * 2 }}
             >
               Sobre mim
             </motion.h3>
@@ -48,7 +48,7 @@ export default function Aboutme() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.15, delay: baseDelay * 2 }}
+              transition={{ duration: 0.15, delay: baseDelay * 3 }}
               className="text-justify text-sm dark:text-slate-50 md:text-base"
             >
               Meu nome é Gabriel Silva Feitosa, sou apaixonado por tecnologia e
@@ -60,7 +60,7 @@ export default function Aboutme() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.15, delay: baseDelay * 3 }}
+              transition={{ duration: 0.15, delay: baseDelay * 4 }}
               className="text-justify text-sm dark:text-slate-50 md:text-base"
             >
               Sou <b>Desenvolvedor Web</b> com foco em <b>front-end.</b> Gosto de criar
@@ -72,7 +72,7 @@ export default function Aboutme() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.15, delay: baseDelay * 4 }}
+              transition={{ duration: 0.15, delay: baseDelay * 5 }}
               className="text-justify text-sm dark:text-slate-50 md:text-base"
             >
               Além disso, estou expandindo meus conhecimentos para o mundo <b>back-end</b> e <b>mobile</b> por meio do <b>NodeJS</b> e <b>React Native.</b>
@@ -83,7 +83,7 @@ export default function Aboutme() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.15, delay: baseDelay * 5 }}
+                transition={{ duration: 0.15, delay: baseDelay * 6 }}
                 className="flex w-32 flex-row justify-center gap-2 rounded bg-[#6e6ad2] px-4 py-2 text-slate-50 drop-shadow duration-200 hover:scale-105 hover:bg-[#6e6ad2]/80 hover:text-white hover:ease-in-out"
               >
                 Currículo

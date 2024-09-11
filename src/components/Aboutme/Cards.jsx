@@ -9,12 +9,12 @@ export default function Cards() {
   const baseDelay = 0.2;
   
   return (
-    <section dra className="w-full flex md:justify-center md:items-center gap-4 p-4 snap-mandatory snap-x overflow-x-scroll md:overflow-hidden drop-shadow-md scrollbar-thin scrollbar-track-transparent scrollbar-thumb-gray-300 dark:scrollbar-thumb-gray-800">
+    <section dra className="will-change-transform w-full flex md:justify-center md:items-center gap-4 p-4 snap-mandatory snap-x overflow-x-scroll md:overflow-hidden drop-shadow-md scrollbar-thin scrollbar-track-transparent scrollbar-thumb-gray-300 dark:scrollbar-thumb-gray-800">
       <motion.div 
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.2, delay: baseDelay * 6 }}
+        transition={{ duration: 0.3, delay: baseDelay * 6 }}
         className="bg-white dark:bg-black text-black dark:text-white rounded-md p-4 w-full min-w-[270px] max-w-[300px] md:max-w-[360px] min-h-[120px] flex items-center justify-center snap-center"
       >
         <div className="flex items-center justify-center gap-4">
@@ -27,7 +27,7 @@ export default function Cards() {
       initial={{ opacity: 0, x: -100 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.2, delay: baseDelay * 7 }}
+      transition={{ duration: 0.3, delay: baseDelay * 7 }}
         className="bg-white dark:bg-black text-black dark:text-white rounded-md p-4 w-full min-w-[270px] max-w-[300px] md:max-w-[360px] min-h-[120px] flex items-center justify-center snap-center"
       >
         <div className="flex items-center justify-center gap-4">
@@ -40,7 +40,7 @@ export default function Cards() {
       initial={{ opacity: 0, x: -100 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.2, delay: baseDelay * 8 }}
+      transition={{ duration: 0.3, delay: baseDelay * 8 }}
         className="bg-white dark:bg-black text-black dark:text-white rounded-md p-4 w-full min-w-[270px] max-w-[300px] md:max-w-[360px] min-h-[120px] flex items-center justify-center snap-center"
       >
         <div className="flex items-center justify-center gap-4">
