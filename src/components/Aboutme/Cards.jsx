@@ -17,7 +17,7 @@ export default function Cards() {
         transition={{ duration: 0.3, delay: baseDelay * 6 }}
         className="bg-white dark:bg-black text-black dark:text-white rounded-md p-4 w-full min-w-[270px] max-w-[300px] md:max-w-[360px] min-h-[120px] flex items-center justify-center snap-center"
       >
-        <div className="flex items-center justify-center gap-4">
+        <div className="flex items-center justify-center gap-6">
           <Image src={figmaSVG} alt="logo do Figma" width={50} />
           <span className="md:max-w-[150px]">Criação de design feito com Figma</span>
         </div>
@@ -30,7 +30,7 @@ export default function Cards() {
       transition={{ duration: 0.3, delay: baseDelay * 7 }}
         className="bg-white dark:bg-black text-black dark:text-white rounded-md p-4 w-full min-w-[270px] max-w-[300px] md:max-w-[360px] min-h-[120px] flex items-center justify-center snap-center"
       >
-        <div className="flex items-center justify-center gap-4">
+        <div className="flex items-center justify-center gap-6">
           <Image src={nextjsSVG} alt="logo do Next js" width={70} />
           <span className="md:max-w-[150px]">Sites performáticos utilizando NextJS</span>
         </div>
@@ -43,7 +43,7 @@ export default function Cards() {
       transition={{ duration: 0.3, delay: baseDelay * 8 }}
         className="bg-white dark:bg-black text-black dark:text-white rounded-md p-4 w-full min-w-[270px] max-w-[300px] md:max-w-[360px] min-h-[120px] flex items-center justify-center snap-center"
       >
-        <div className="flex items-center justify-center gap-4">
+        <div className="flex items-center justify-center gap-6">
           <Image src={mobileSVG} alt="Icone de smartphone" width={50} />
           <span className="md:max-w-[150px]">Sites responsivos</span>
         </div>
