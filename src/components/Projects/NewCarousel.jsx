@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Outfit } from "next/font/google";
 import { FaGithub } from "react-icons/fa";
@@ -18,16 +17,9 @@ const outfit = Outfit({
   subsets: ["latin"],
 });
 
-export default function NewCarousel() {
-  const baseDelay = 0.2;
-  
+export default function NewCarousel() { 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: -50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: baseDelay * 2 }}
-    >
+    <div>
       <Swiper className="mySwiper rounded-lg" modules={[Autoplay]} loop={true} slidesPerView={1} spaceBetween={30} autoplay={{
           delay: 5000,
           disableOnInteraction: true,
@@ -169,6 +161,6 @@ export default function NewCarousel() {
         </SwiperSlide>
 
       </Swiper>
-    </motion.div>
+    </div>
   );
 }
