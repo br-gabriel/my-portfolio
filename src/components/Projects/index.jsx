@@ -11,11 +11,11 @@ export default function Projects() {
 
   return (
     <section
-      id="projects"
       className="flex h-full w-full flex-col items-center justify-start pb-36"
     >
       <div className="mt-20 flex flex-col items-center">
         <span
+          id="projects"
           className={`${outfit.className} mb-2 font-semibold text-[#6e6ad2]`}
         >
           ESTUDOS DE CASO
