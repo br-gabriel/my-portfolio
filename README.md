@@ -1,5 +1,5 @@
 # Meu Portfólio
-Meu site pessoal utilizando React e Next.JS. [Link para o site](https://my-portfolio-vxko.vercel.app)
+Meu site pessoal utilizando React e Next.JS. [Link para o site](https://brgabriel-portfolio.vercel.app/)
 
 ## Pré-requisitos
 Certifique-se de ter o Node.js instalado na sua máquina.
