@@ -45,7 +45,7 @@ export default function Aboutme() {
               Meu nome é Gabriel, sou estudante de <b>Ciência da Computação</b>.
               Tenho experiência em desenvolvimento web, com foco no{" "}
               <b>front-end</b>, utilizando ferramentas como{" "}
-              <b>React, Tailwind e Styled Components</b> para criar interfaces
+              <b>React, Next JS e Tailwind</b> para criar interfaces
               modernas e responsivas.
             </p>
 
