@@ -49,8 +49,8 @@ export default function NewCarousel() {
                   Cripto Tracker App
                 </h3>
                 <p className="max-h-[7em] w-[93%] overflow-hidden dark:text-slate-50 md:max-h-[9em]">
-                  Aplicativo para acompanhar as principais informações de
-                  criptomoedas.
+                  Aplicativo desenvolvido com React Native para acompanhar as principais informações de
+                  criptomoedas do mercado.
                 </p>
               </div>
 
