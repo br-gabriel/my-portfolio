@@ -88,8 +88,10 @@ export default function NewCarousel() {
                   Habit App
                 </h3>
                 <p className="max-h-[7em] w-[93%] overflow-hidden dark:text-slate-50 md:max-h-[9em]">
-                  Site e aplicativo de acompanhamento de hábitos, desenvolvida
-                  durante a primera NLW da Rocketseat de 2023.
+                  Site e aplicativo de acompanhamento de hábitos, desenvolvido
+                  em React com NextJS, React Native para a criação do
+                  aplicativo, NodeJS para o backend e SQLite para o banco de
+                  dados.
                 </p>
               </div>
 
