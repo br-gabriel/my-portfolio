@@ -2,13 +2,13 @@
     "projectsCards": [
         {
             "title": "Cripto Tracker App",
-            "description": "Aplicativo para acompanhar as principais informações de criptomoedas.",
+            "description": "Aplicativo para acompanhar as principais informações de criptomoedas em tempo real, com gráficos interativos e busca avançada.",
             "tags": [
-                "React Native", "Styled Components", "React Navigation", "React Native Chart Kit"
+                "React Native", "Styled Components", "React Navigation", "Chart Kit"
             ],
             "image": {
-                "url": "../../../public/images/cripto.png",
-                "alt": "Banner de apresentação do aplicativo, mostrando as três telas principais (Listagem de moedas, Resultado de busca e detalhes da moeda)"
+                "url": "/images/cripto.png",
+                "alt": "Banner de apresentação do aplicativo, mostrando as três telas principais"
             },
             "links": {
                 "firstLink": "https://github.com/br-gabriel/cripto-app",
@@ -17,13 +17,13 @@
         },
         {
             "title": "Habit App",
-            "description": "Site e aplicativo de acompanhamento de hábitos, desenvolvida durante a primera NLW da Rocketseat de 2023.",
+            "description": "Site e aplicativo de acompanhamento de hábitos com backend integrado, permitindo criar e monitorar hábitos diários.",
             "tags": [
                 "React", "React Native", "Node", "Tailwind", "Prisma", "SQLite"
             ],
             "image": {
-                "url": "../../../public/images/habits.png",
-                "alt": "Banner de apresentação do site e do aplicativo, mostrando o histórico de hábitos de um usuário"
+                "url": "/images/habits.png",
+                "alt": "Banner de apresentação do site e do aplicativo de hábitos"
             },
             "links": {
                 "firstLink": "https://github.com/br-gabriel/NLW-Habit-Tracker",
@@ -32,13 +32,13 @@
         },
         {
             "title": "Site Finans",
-            "description": "Site de uma instituição financeira fictícia, criada para treinar os conceitos aprendidos com Bootstrap.",
+            "description": "Landing page de uma instituição financeira fictícia, com design responsivo e layout moderno usando Bootstrap.",
             "tags": [
                 "HTML", "Bootstrap", "Javascript"
             ],
             "image": {
-                "url": "../../../public/images/finans.png",
-                "alt": "Banner de apresentação mostrando a parte inicial do site"
+                "url": "/images/finans.png",
+                "alt": "Banner de apresentação mostrando a parte inicial do site Finans"
             },
             "links": {
                 "firstLink": "https://github.com/br-gabriel/Site-com-bootstrap-4",
@@ -47,12 +47,12 @@
         },
         {
             "title": "Gestor Financeiro",
-            "description": "Um projeto que armazena o histórico de entrada e saída de valores e calcula o saldo final.",
+            "description": "Aplicação web que armazena o histórico de entrada e saída de valores, calculando o saldo final automaticamente.",
             "tags": [
                 "React", "Typescript"
             ],
             "image": {
-                "url": "../../../public/images/dtmoney.png",
+                "url": "/images/dtmoney.png",
                 "alt": "Banner mostrando o painel do gestor financeiro"
             },
             "links": {

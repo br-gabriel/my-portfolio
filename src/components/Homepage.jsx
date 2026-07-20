@@ -1,88 +1,115 @@
 "use client"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { Outfit } from "next/font/google"
 import { FaLinkedin, FaGithub } from "react-icons/fa"
-
-const outfit = Outfit({
-  subsets: ['latin']
-})
 
 export default function Homepage() {
   return (
-    <div
+    <section
       id="home"
-      className="relative flex h-screen flex-col items-center justify-center"
+      className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6"
     >
-      <div className={outfit.className}>
-        <motion.h1
-          className="text-center text-5xl font-semibold text-blue-950 dark:text-slate-50 md:text-6xl"
-          initial={{ opacity: 0, y: 50 }}
+      {/* Background grid pattern */}
+      <div className="hero-grid-pattern absolute inset-0" />
+
+      {/* Radial glow */}
+      <div className="glow-bg absolute inset-0" />
+
+      {/* Content */}
+      <div className="relative z-10 flex max-w-4xl flex-col items-center">
+        {/* Badge */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.15, delay: 0.1 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mb-8 flex items-center gap-2 rounded-full border border-td-border bg-td-bg-secondary px-4 py-2"
         >
-          Seu próximo
-        </motion.h1>
+          <span className="relative flex h-2 w-2">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-td-green opacity-75" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-td-green" />
+          </span>
+          <span className="text-sm text-td-text-secondary">
+            Disponível para novos projetos
+          </span>
+        </motion.div>
+
+        {/* Main Heading */}
         <motion.h1
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.15, delay: 0.3 }}
-          className="mt-4 bg-gradient-to-r from-blue-500 to-fuchsia-500 bg-clip-text text-center text-5xl font-black text-transparent md:text-6xl"
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="glow-green text-center font-heading text-5xl font-bold leading-tight tracking-tight md:text-7xl lg:text-8xl"
         >
-          Desenvolvedor Full Stack
+          Eu construo
+          <br />
+          <span className="text-td-green">experiências</span>
+          <br />
+          digitais
         </motion.h1>
+
+        {/* Subtitle */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+          className="mt-8 max-w-xl text-center text-base leading-relaxed text-td-text-secondary md:text-lg"
+        >
+          Desenvolvedor Full Stack apaixonado por transformar ideias em
+          interfaces modernas, performáticas e com código limpo.
+        </motion.p>
+
+        {/* CTA Buttons */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 1.0 }}
+          className="mt-10 flex flex-row gap-4"
+        >
+          <Link
+            href="https://www.linkedin.com/in/gabriel-silva-feitosa/"
+            target="_blank"
+            className="group flex items-center gap-2 rounded-full border border-td-border bg-td-bg-secondary px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:border-td-green/50 hover:bg-td-green/10 hover:shadow-lg hover:shadow-td-green/5"
+          >
+            <FaLinkedin size={18} className="text-td-text-secondary transition-colors group-hover:text-td-green" />
+            LinkedIn
+          </Link>
+          <Link
+            href="https://github.com/br-gabriel"
+            target="_blank"
+            className="group flex items-center gap-2 rounded-full border border-td-border bg-td-bg-secondary px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:border-td-green/50 hover:bg-td-green/10 hover:shadow-lg hover:shadow-td-green/5"
+          >
+            <FaGithub size={18} className="text-td-text-secondary transition-colors group-hover:text-td-green" />
+            GitHub
+          </Link>
+        </motion.div>
       </div>
 
-      <motion.p
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.15, delay: 0.5 }}
-        className="mt-8 max-w-lg text-center text-sm font-light leading-5 text-slate-600 dark:text-slate-100 md:text-base"
-      >
-        Me chamo Gabriel Feitosa e sou desenvolvedor React, Node e React Native,
-        saiba mais sobre mim abaixo.
-      </motion.p>
-
-      <div className="mt-8 flex flex-col gap-4 md:flex-row">
-        <Link
-          href="https://www.linkedin.com/in/gabriel-silva-feitosa/"
-          target="blank"
-        >
-          <motion.button
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7 }}
-            className="flex w-36 flex-row items-center justify-center gap-3 rounded border border-slate-500 bg-slate-600 px-3 py-1 text-slate-50 drop-shadow duration-200 hover:scale-105 hover:bg-slate-500/80 hover:ease-in-out dark:border-slate-50 dark:bg-slate-50 dark:text-slate-600 dark:hover:border-slate-50/80 dark:hover:bg-slate-50/80"
-          >
-            <FaLinkedin size={19} />
-            Linkedin
-          </motion.button>
-        </Link>
-        <Link href="https://github.com/br-gabriel" target="blank">
-          <motion.button
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.9 }}
-            className="flex w-36 flex-row items-center justify-center gap-3 rounded border border-slate-500 bg-white px-3 py-1 text-slate-500 drop-shadow duration-200 hover:scale-105 hover:border-slate-500/80 hover:text-slate-500/80 hover:ease-in-out dark:border-slate-50 dark:bg-transparent dark:text-slate-50 dark:hover:border-slate-50/80 dark:hover:text-slate-50/80"
-          >
-            <FaGithub size={19} />
-            Github
-          </motion.button>
-        </Link>
-      </div>
-
+      {/* Scroll indicator */}
       <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.1 }}
-        className="absolute bottom-20 flex w-[24em] flex-row items-center justify-center gap-3 rounded-3xl bg-violet-50 px-8 py-1 text-sm text-slate-500 drop-shadow dark:bg-violet-900/20 dark:text-slate-50 md:w-[25em] md:text-base"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.5 }}
+        className="absolute bottom-10"
       >
-        <span className="relative flex h-3 w-3">
-          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
-          <span className="relative inline-flex h-3 w-3 rounded-full bg-green-500"></span>
-        </span>
-        <p>Disponível para trabalhos freelancer!</p>
+        <motion.div
+          animate={{ y: [0, 8, 0] }}
+          transition={{ repeat: Infinity, duration: 2 }}
+          className="flex flex-col items-center gap-2"
+        >
+          <span className="text-xs tracking-widest text-td-text-secondary">
+            SCROLL
+          </span>
+          <svg
+            className="h-5 w-5 text-td-text-secondary"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7" />
+          </svg>
+        </motion.div>
       </motion.div>
-    </div>
-  );
+    </section>
+  )
 }

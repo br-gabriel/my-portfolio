@@ -1,3 +1,85 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --color-bg: #0a0a0a;
+  --color-bg-secondary: #141414;
+  --color-bg-card: #1a1a1a;
+  --color-text: #ffffff;
+  --color-text-secondary: #a1a1a1;
+  --color-accent: #00DC82;
+  --color-accent-secondary: #7B61FF;
+  --color-border: #2a2a2a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+::selection {
+  background-color: rgba(0, 220, 130, 0.3);
+  color: #ffffff;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* Infinite carousel animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 25s linear infinite;
+}
+
+.animate-scroll-left:hover {
+  animation-play-state: paused;
+}
+
+/* Subtle grid pattern for hero */
+.hero-grid-pattern {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Gradient glow effect */
+.glow-green {
+  text-shadow: 0 0 80px rgba(0, 220, 130, 0.3);
+}
+
+.glow-bg {
+  background: radial-gradient(
+    ellipse 50% 40% at 50% 50%,
+    rgba(0, 220, 130, 0.08) 0%,
+    transparent 100%
+  );
+}

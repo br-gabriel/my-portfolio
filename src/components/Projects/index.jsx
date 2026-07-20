@@ -1,35 +1,44 @@
-"use client";
-import { Outfit } from "next/font/google";
-import NewCarousel from "./NewCarousel";
-
-const outfit = Outfit({
-  subsets: ["latin"],
-});
+"use client"
+import { motion } from "framer-motion"
+import ProjectCard from "./ProjectCard"
+import projectsData from "./ProjectsData.json"
 
 export default function Projects() {
-  const baseDelay = 0.2;
-
   return (
     <section
-      className="flex h-full w-full flex-col items-center justify-start pb-36"
+      id="projects"
+      className="relative w-full py-28 px-6"
     >
-      <div className="mt-20 flex flex-col items-center">
-        <span
-          id="projects"
-          className={`${outfit.className} mb-2 font-semibold text-[#6e6ad2]`}
-        >
-          ESTUDOS DE CASO
-        </span>
+      {/* Subtle background difference */}
+      <div className="absolute inset-0 bg-td-bg-secondary/30" />
 
-        <h3
-          className={`${outfit.className} text-2xl font-semibold text-blue-950 dark:text-slate-50 md:text-3xl`}
+      <div className="relative z-10 mx-auto max-w-5xl">
+        {/* Section header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mb-16 text-center"
         >
-          Projetos recentes
-        </h3>
-      </div>
-      <div className="mt-5 w-full max-w-5xl overflow-hidden p-2 md:mt-16">
-        <NewCarousel />
+          <span className="text-sm font-medium uppercase tracking-[0.2em] text-td-green">
+            Portfólio
+          </span>
+          <h2 className="mt-4 font-heading text-3xl font-bold md:text-5xl">
+            Projetos <span className="text-td-green">recentes</span>
+          </h2>
+          <p className="mt-4 text-td-text-secondary">
+            Uma seleção dos meus trabalhos mais relevantes
+          </p>
+        </motion.div>
+
+        {/* Projects Grid — UXfolio style 2 columns */}
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+          {projectsData.projectsCards.map((project, index) => (
+            <ProjectCard key={project.title} project={project} index={index} />
+          ))}
+        </div>
       </div>
     </section>
-  );
+  )
 }

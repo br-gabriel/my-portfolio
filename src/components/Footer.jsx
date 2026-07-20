@@ -1,68 +1,88 @@
-"use client";
-import Link from "next/link";
-import { Outfit } from "next/font/google";
-import { FaLinkedin, FaWhatsapp } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
-import { GoLinkExternal } from "react-icons/go";
-import { BiCopy } from "react-icons/bi";
-
-const outfit = Outfit({
-  subsets: ["latin"],
-});
+"use client"
+import Link from "next/link"
+import { motion } from "framer-motion"
+import { FaLinkedin, FaWhatsapp, FaGithub } from "react-icons/fa"
+import { MdEmail } from "react-icons/md"
+import { FiArrowUpRight } from "react-icons/fi"
 
 export default function Footer() {
-  const handleCopyText = () => {
-    navigator.clipboard.writeText("contato.gabrielfeitosa@gmail.com");
-    alert("E-mail copiado!");
-  };
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText("contato.gabrielfeitosa@gmail.com")
+    alert("E-mail copiado!")
+  }
 
   return (
     <footer
       id="contacts"
-      className="flex w-full items-center justify-center bg-black"
+      className="relative w-full border-t border-td-border"
     >
-      <div className="w-full max-w-7xl px-4 py-8">
-        <h3
-          className={`${outfit.className} bg-gradient-to-r from-blue-500 via-violet-500 to-violet-500 bg-clip-text text-2xl font-bold text-transparent`}
-        >
-          Vamos trabalhar juntos!
-        </h3>
+      {/* CTA Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="mx-auto max-w-5xl px-6 py-24 text-center"
+      >
+        <span className="text-sm font-medium uppercase tracking-[0.2em] text-td-green">
+          Contato
+        </span>
+        <h2 className="mt-6 font-heading text-4xl font-bold md:text-6xl">
+          Vamos construir algo{" "}
+          <span className="text-td-green">incrível</span> juntos?
+        </h2>
+        <p className="mx-auto mt-6 max-w-lg text-td-text-secondary">
+          Estou sempre aberto a novos projetos e oportunidades. Entre em
+          contato e vamos conversar.
+        </p>
 
-        <ul className="ml-4 mt-6 flex flex-col gap-2 text-white">
-          <li className="flex flex-row gap-4">
+        {/* Contact links */}
+        <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+          <Link
+            href="https://wa.me/5568992490473"
+            target="_blank"
+            className="group flex items-center gap-2 rounded-full bg-td-green px-7 py-3.5 text-sm font-semibold text-td-bg transition-all duration-300 hover:bg-td-green-dark hover:shadow-lg hover:shadow-td-green/20"
+          >
+            <FaWhatsapp size={18} />
+            WhatsApp
+            <FiArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </Link>
+
+          <button
+            onClick={handleCopyEmail}
+            className="group flex items-center gap-2 rounded-full border border-td-border bg-td-bg-secondary px-7 py-3.5 text-sm font-medium text-white transition-all duration-300 hover:border-td-green/50 hover:bg-td-green/10"
+          >
+            <MdEmail size={18} className="text-td-text-secondary group-hover:text-td-green" />
+            contato.gabrielfeitosa@gmail.com
+          </button>
+        </div>
+      </motion.div>
+
+      {/* Bottom bar */}
+      <div className="border-t border-td-border">
+        <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 px-6 py-6 sm:flex-row">
+          <span className="text-xs text-td-text-secondary">
+            © {new Date().getFullYear()} Gabriel Feitosa. Todos os direitos reservados.
+          </span>
+
+          <div className="flex items-center gap-4">
             <Link
-              href="https://wa.me/5568992490473"
-              target="blank"
-              className="flex items-center justify-center gap-2 transition ease-in-out hover:text-blue-500"
+              href="https://github.com/br-gabriel"
+              target="_blank"
+              className="text-td-text-secondary transition-colors hover:text-td-green"
             >
-              <FaWhatsapp size={20} />
-              (68) 99249-0473
-              <GoLinkExternal size={14} />
+              <FaGithub size={18} />
             </Link>
-          </li>
-          <li className="flex flex-row gap-4">
-            <button
-              onClick={handleCopyText}
-              className="flex items-center justify-center gap-2 transition ease-in-out hover:text-blue-500"
-            >
-              <MdEmail size={20} />
-              contato.gabrielfeitosa@gmail.com
-              <BiCopy size={14} />
-            </button>
-          </li>
-          <li className="flex flex-row gap-4">
             <Link
               href="https://www.linkedin.com/in/gabriel-silva-feitosa/"
-              target="blank"
-              className="flex items-center justify-center gap-2 transition ease-in-out hover:text-blue-500"
+              target="_blank"
+              className="text-td-text-secondary transition-colors hover:text-td-green"
             >
-              <FaLinkedin size={20} />
-              Linkedin
-              <GoLinkExternal size={14} />
+              <FaLinkedin size={18} />
             </Link>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </footer>
-  );
+  )
 }

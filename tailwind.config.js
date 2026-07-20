@@ -7,13 +7,24 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'td-green': '#00DC82',
+        'td-green-dark': '#00b368',
+        'td-purple': '#7B61FF',
+        'td-bg': '#0a0a0a',
+        'td-bg-secondary': '#141414',
+        'td-bg-card': '#1a1a1a',
+        'td-border': '#2a2a2a',
+        'td-text-secondary': '#a1a1a1',
+      },
+      fontFamily: {
+        heading: ['var(--font-space-grotesk)', 'sans-serif'],
+        body: ['var(--font-outfit)', 'sans-serif'],
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
   },
-  darkMode: 'class',
-  plugins: [require('tailwind-scrollbar')],
+  plugins: [],
 }
