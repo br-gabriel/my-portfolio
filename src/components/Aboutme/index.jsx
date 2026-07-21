@@ -37,16 +37,14 @@ export default function Aboutme() {
             className="flex-shrink-0"
           >
             <div className="relative">
-              <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-td-green/20 to-td-purple/20 blur-lg" />
-              <div className="relative overflow-hidden rounded-2xl border border-td-border bg-td-bg-card p-1">
-                <Image
-                  src={profilePic}
-                  alt="Gabriel Feitosa"
-                  width={220}
-                  height={220}
-                  className="rounded-xl object-cover"
-                />
-              </div>
+              <div className="absolute -inset-2 rounded-full bg-gradient-to-br from-td-green/25 to-td-purple/25 blur-md" />
+              <Image
+                src={profilePic}
+                alt="Gabriel Feitosa"
+                width={220}
+                height={220}
+                className="relative rounded-full object-cover"
+              />
               {/* Location badge */}
               <div className="absolute -bottom-3 left-1/2 flex -translate-x-1/2 items-center gap-1.5 rounded-full border border-td-border bg-td-bg-secondary px-3 py-1.5">
                 <IoLocationSharp className="text-td-green" size={14} />
