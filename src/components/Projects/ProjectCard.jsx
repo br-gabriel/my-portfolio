@@ -41,7 +41,7 @@ export default function ProjectCard({ project, index }) {
               className="flex items-center gap-2 rounded-full bg-td-green px-5 py-2.5 text-sm font-semibold text-td-bg transition-transform hover:scale-105"
             >
               <FiExternalLink size={16} />
-              Demo
+              {project.links.firstLink ? "Demo" : "Acessar site"}
             </Link>
           )}
         </div>

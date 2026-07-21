@@ -59,6 +59,66 @@
                 "firstLink": "https://github.com/br-gabriel/dtmoney-finance",
                 "secondLink": "https://effulgent-crepe-8e024f.netlify.app"
             }
+        },
+        {
+            "title": "Pneufree.com",
+            "description": "O maior e-commerce especializado em pneus e rodas do Brasil, com uma experiência de compra moderna, busca avançada de produtos e alta performance.",
+            "tags": [
+                "E-commerce", "UX/UI", "Next.js", "Tailwind"
+            ],
+            "image": {
+                "url": "/images/pneufree.png",
+                "alt": "Print da tela inicial do site Pneufree.com"
+            },
+            "links": {
+                "firstLink": "",
+                "secondLink": "https://www.pneufree.com.br"
+            }
+        },
+        {
+            "title": "Xbri Pneus",
+            "description": "Website oficial da Xbri Pneus, focado em branding institucional, catálogo completo de produtos e alta performance com design responsivo.",
+            "tags": [
+                "Branding", "Catálogo", "UX/UI", "Responsivo"
+            ],
+            "image": {
+                "url": "/images/xbri.png",
+                "alt": "Print da tela inicial do site Xbri Pneus"
+            },
+            "links": {
+                "firstLink": "",
+                "secondLink": "https://www.xbri.com.br"
+            }
+        },
+        {
+            "title": "Michelin Pneufree",
+            "description": "Plataforma e landing page premium desenvolvida em parceria com a Michelin para apresentação e venda da linha de pneus de alta performance.",
+            "tags": [
+                "Landing Page", "E-commerce", "Parceria Premium", "UX/UI"
+            ],
+            "image": {
+                "url": "/images/michelin.png",
+                "alt": "Print da tela inicial do site Michelin Pneufree"
+            },
+            "links": {
+                "firstLink": "",
+                "secondLink": "https://michelin.pneufree.com.br"
+            }
+        },
+        {
+            "title": "Loja Pneuzão",
+            "description": "Plataforma de e-commerce robusta para a Loja Pneuzão, oferecendo uma experiência de compra ágil, filtros avançados e checkout otimizado.",
+            "tags": [
+                "E-commerce", "UX/UI", "Filtros Avançados", "Responsivo"
+            ],
+            "image": {
+                "url": "/images/pneuzao.png",
+                "alt": "Print da tela inicial do site Loja Pneuzão"
+            },
+            "links": {
+                "firstLink": "",
+                "secondLink": "https://loja.pneuzao.com.br"
+            }
         }
     ]
 }
