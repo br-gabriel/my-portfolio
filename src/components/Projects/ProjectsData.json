@@ -13,7 +13,8 @@
             "links": {
                 "firstLink": "https://github.com/br-gabriel/cripto-app",
                 "secondLink": ""
-            }
+            },
+            "category": "estudos"
         },
         {
             "title": "Habit App",
@@ -28,7 +29,8 @@
             "links": {
                 "firstLink": "https://github.com/br-gabriel/NLW-Habit-Tracker",
                 "secondLink": ""
-            }
+            },
+            "category": "estudos"
         },
         {
             "title": "Site Finans",
@@ -43,7 +45,8 @@
             "links": {
                 "firstLink": "https://github.com/br-gabriel/Site-com-bootstrap-4",
                 "secondLink": "https://br-gabriel.github.io/Site-com-bootstrap-4/"
-            }
+            },
+            "category": "estudos"
         },
         {
             "title": "Gestor Financeiro",
@@ -58,7 +61,8 @@
             "links": {
                 "firstLink": "https://github.com/br-gabriel/dtmoney-finance",
                 "secondLink": "https://effulgent-crepe-8e024f.netlify.app"
-            }
+            },
+            "category": "estudos"
         },
         {
             "title": "Pneufree.com",
@@ -73,7 +77,8 @@
             "links": {
                 "firstLink": "",
                 "secondLink": "https://www.pneufree.com.br"
-            }
+            },
+            "category": "profissional"
         },
         {
             "title": "Xbri Pneus",
@@ -88,7 +93,8 @@
             "links": {
                 "firstLink": "",
                 "secondLink": "https://www.xbri.com.br"
-            }
+            },
+            "category": "profissional"
         },
         {
             "title": "Michelin Pneufree",
@@ -103,7 +109,8 @@
             "links": {
                 "firstLink": "",
                 "secondLink": "https://michelin.pneufree.com.br"
-            }
+            },
+            "category": "profissional"
         },
         {
             "title": "Loja Pneuzão",
@@ -118,7 +125,8 @@
             "links": {
                 "firstLink": "",
                 "secondLink": "https://loja.pneuzao.com.br"
-            }
+            },
+            "category": "profissional"
         }
     ]
 }

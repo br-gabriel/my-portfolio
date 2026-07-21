@@ -1,9 +1,22 @@
 "use client"
+import { useState } from "react"
 import { motion } from "framer-motion"
 import ProjectCard from "./ProjectCard"
 import projectsData from "./ProjectsData.json"
 
 export default function Projects() {
+  const [selectedCategory, setSelectedCategory] = useState("profissional")
+
+  const categories = [
+    { id: "profissional", label: "Profissional" },
+    { id: "pessoais", label: "Proj. Pessoais" },
+    { id: "estudos", label: "Estudos" }
+  ]
+
+  const filteredProjects = projectsData.projectsCards.filter(
+    (project) => project.category === selectedCategory
+  )
+
   return (
     <section
       id="projects"
@@ -19,7 +32,7 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mb-16 text-center"
+          className="mb-12 text-center"
         >
           <span className="text-sm font-medium uppercase tracking-[0.2em] text-td-green">
             Portfólio
@@ -32,12 +45,51 @@ export default function Projects() {
           </p>
         </motion.div>
 
-        {/* Projects Grid — UXfolio style 2 columns */}
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          {projectsData.projectsCards.map((project, index) => (
-            <ProjectCard key={project.title} project={project} index={index} />
-          ))}
+        {/* Category Filters */}
+        <div className="mb-16 flex flex-wrap justify-center gap-3">
+          <div className="flex gap-2 rounded-full border border-td-border bg-td-bg-secondary/30 p-1.5">
+            {categories.map((category) => {
+              const isActive = selectedCategory === category.id
+              return (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`relative rounded-full px-6 py-2 text-sm font-semibold transition-colors duration-300 focus:outline-none ${
+                    isActive ? "text-td-bg" : "text-td-text-secondary hover:text-white"
+                  }`}
+                >
+                  {isActive && (
+                    <motion.span
+                      layoutId="activeCategory"
+                      className="absolute inset-0 rounded-full bg-td-green"
+                      transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                    />
+                  )}
+                  <span className="relative z-10">{category.label}</span>
+                </button>
+              )
+            })}
+          </div>
         </div>
+
+        {/* Projects Grid — UXfolio style 2 columns */}
+        {filteredProjects.length > 0 ? (
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+            {filteredProjects.map((project, index) => (
+              <ProjectCard key={project.title} project={project} index={index} />
+            ))}
+          </div>
+        ) : (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="py-16 text-center"
+          >
+            <p className="text-td-text-secondary">
+              Nenhum projeto cadastrado nesta categoria no momento.
+            </p>
+          </motion.div>
+        )}
       </div>
     </section>
   )
