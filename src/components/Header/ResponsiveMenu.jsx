@@ -1,9 +1,19 @@
 'use client'
 import { Link } from 'react-scroll'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useEffect, useState } from 'react'
+import { createPortal } from 'react-dom'
 
 export default function ResponsiveMenu({ isVisible, onClose }) {
-  return (
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) return null
+
+  return createPortal(
     <AnimatePresence>
       {isVisible && (
         <>
@@ -12,7 +22,7 @@ export default function ResponsiveMenu({ isVisible, onClose }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm"
+            className="fixed inset-0 z-[99] bg-black/70 backdrop-blur-sm"
             onClick={onClose}
           />
 
@@ -22,10 +32,10 @@ export default function ResponsiveMenu({ isVisible, onClose }) {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed right-0 top-0 z-50 flex h-full w-72 flex-col bg-td-bg-secondary border-l border-td-border p-8"
+            className="fixed right-0 top-0 z-[100] flex h-full h-screen w-72 flex-col bg-td-bg-secondary border-l border-td-border p-8 shadow-2xl overflow-y-auto"
           >
             {/* Close button */}
-            <button onClick={onClose} className="mb-10 self-end">
+            <button onClick={onClose} className="mb-10 self-end p-2" aria-label="Fechar menu">
               <svg
                 className="h-6 w-6 text-td-text-secondary hover:text-td-green transition-colors"
                 fill="none"
@@ -84,6 +94,7 @@ export default function ResponsiveMenu({ isVisible, onClose }) {
           </motion.div>
         </>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body
   )
 }
