@@ -2,63 +2,147 @@
     "projectsCards": [
         {
             "title": "Cripto Tracker App",
-            "description": "Aplicativo para acompanhar as principais informações de criptomoedas.",
+            "description": "Aplicativo para acompanhar as principais informações de criptomoedas em tempo real, com gráficos interativos e busca avançada.",
             "tags": [
-                "React Native", "Styled Components", "React Navigation", "React Native Chart Kit"
+                "React Native", "Styled Components", "React Navigation", "Chart Kit"
             ],
             "image": {
-                "url": "../../../public/images/cripto.png",
-                "alt": "Banner de apresentação do aplicativo, mostrando as três telas principais (Listagem de moedas, Resultado de busca e detalhes da moeda)"
+                "url": "/images/cripto.png",
+                "alt": "Banner de apresentação do aplicativo, mostrando as três telas principais"
             },
             "links": {
                 "firstLink": "https://github.com/br-gabriel/cripto-app",
                 "secondLink": ""
-            }
+            },
+            "category": "estudos"
         },
         {
             "title": "Habit App",
-            "description": "Site e aplicativo de acompanhamento de hábitos, desenvolvida durante a primera NLW da Rocketseat de 2023.",
+            "description": "Site e aplicativo de acompanhamento de hábitos com backend integrado, permitindo criar e monitorar hábitos diários.",
             "tags": [
                 "React", "React Native", "Node", "Tailwind", "Prisma", "SQLite"
             ],
             "image": {
-                "url": "../../../public/images/habits.png",
-                "alt": "Banner de apresentação do site e do aplicativo, mostrando o histórico de hábitos de um usuário"
+                "url": "/images/habits.png",
+                "alt": "Banner de apresentação do site e do aplicativo de hábitos"
             },
             "links": {
                 "firstLink": "https://github.com/br-gabriel/NLW-Habit-Tracker",
                 "secondLink": ""
-            }
+            },
+            "category": "estudos"
         },
         {
             "title": "Site Finans",
-            "description": "Site de uma instituição financeira fictícia, criada para treinar os conceitos aprendidos com Bootstrap.",
+            "description": "Landing page de uma instituição financeira fictícia, com design responsivo e layout moderno usando Bootstrap.",
             "tags": [
                 "HTML", "Bootstrap", "Javascript"
             ],
             "image": {
-                "url": "../../../public/images/finans.png",
-                "alt": "Banner de apresentação mostrando a parte inicial do site"
+                "url": "/images/finans.png",
+                "alt": "Banner de apresentação mostrando a parte inicial do site Finans"
             },
             "links": {
                 "firstLink": "https://github.com/br-gabriel/Site-com-bootstrap-4",
                 "secondLink": "https://br-gabriel.github.io/Site-com-bootstrap-4/"
-            }
+            },
+            "category": "estudos"
         },
         {
             "title": "Gestor Financeiro",
-            "description": "Um projeto que armazena o histórico de entrada e saída de valores e calcula o saldo final.",
+            "description": "Aplicação web que armazena o histórico de entrada e saída de valores, calculando o saldo final automaticamente.",
             "tags": [
                 "React", "Typescript"
             ],
             "image": {
-                "url": "../../../public/images/dtmoney.png",
+                "url": "/images/dtmoney.png",
                 "alt": "Banner mostrando o painel do gestor financeiro"
             },
             "links": {
                 "firstLink": "https://github.com/br-gabriel/dtmoney-finance",
                 "secondLink": "https://effulgent-crepe-8e024f.netlify.app"
-            }
+            },
+            "category": "estudos"
+        },
+        {
+            "title": "Pneufree.com",
+            "description": "O maior e-commerce especializado em pneus e rodas do Brasil, com uma experiência de compra moderna, busca avançada de produtos e alta performance.",
+            "tags": [
+                "E-commerce", "UX/UI", "Next.js", "Tailwind"
+            ],
+            "image": {
+                "url": "/images/pneufree.png",
+                "alt": "Print da tela inicial do site Pneufree.com"
+            },
+            "links": {
+                "firstLink": "",
+                "secondLink": "https://www.pneufree.com.br"
+            },
+            "category": "profissional"
+        },
+        {
+            "title": "Xbri Pneus",
+            "description": "Website oficial da Xbri Pneus, focado em branding institucional, catálogo completo de produtos e alta performance com design responsivo.",
+            "tags": [
+                "Branding", "Catálogo", "UX/UI", "Responsivo"
+            ],
+            "image": {
+                "url": "/images/xbri.png",
+                "alt": "Print da tela inicial do site Xbri Pneus"
+            },
+            "links": {
+                "firstLink": "",
+                "secondLink": "https://www.xbri.com.br"
+            },
+            "category": "profissional"
+        },
+        {
+            "title": "Michelin Pneufree",
+            "description": "Plataforma e landing page premium desenvolvida em parceria com a Michelin para apresentação e venda da linha de pneus de alta performance.",
+            "tags": [
+                "Landing Page", "E-commerce", "Parceria Premium", "UX/UI"
+            ],
+            "image": {
+                "url": "/images/michelin.png",
+                "alt": "Print da tela inicial do site Michelin Pneufree"
+            },
+            "links": {
+                "firstLink": "",
+                "secondLink": "https://michelin.pneufree.com.br"
+            },
+            "category": "profissional"
+        },
+        {
+            "title": "Loja Pneuzão",
+            "description": "Plataforma de e-commerce robusta para a Loja Pneuzão, oferecendo uma experiência de compra ágil, filtros avançados e checkout otimizado.",
+            "tags": [
+                "E-commerce", "UX/UI", "Filtros Avançados", "Responsivo"
+            ],
+            "image": {
+                "url": "/images/pneuzao.png",
+                "alt": "Print da tela inicial do site Loja Pneuzão"
+            },
+            "links": {
+                "firstLink": "",
+                "secondLink": "https://loja.pneuzao.com.br"
+            },
+            "category": "profissional"
+        },
+        {
+            "title": "Fast Paste",
+            "description": "Extensão para o Google Chrome que otimiza sua produtividade ao permitir salvar, organizar e colar trechos de texto e prompts frequentes com apenas um clique.",
+            "tags": [
+                "Extensão Chrome", "HTML/CSS", "JavaScript", "Produtividade"
+            ],
+            "image": {
+                "url": "/images/fastPaste.png",
+                "alt": "Banner da extensão Fast Paste na Chrome Web Store"
+            },
+            "links": {
+                "firstLink": "",
+                "secondLink": "https://chromewebstore.google.com/detail/fast-paste/ibbjdbkkblfkaiiplgpggochhogfkklk"
+            },
+            "category": "pessoais"
         }
     ]
 }

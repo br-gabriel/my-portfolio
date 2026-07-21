@@ -1,85 +1,116 @@
-"use client";
-import Image from "next/image";
-import Link from "next/link";
-import profilePic from "../../../public/images/profilePic.png";
-import { IoLocationSharp } from "react-icons/io5";
-import { Outfit } from "next/font/google";
-import Cards from "./Cards";
-
-const outfit = Outfit({
-  subsets: ["latin"],
-});
+"use client"
+import Image from "next/image"
+import Link from "next/link"
+import profilePic from "../../../public/images/profilePic.png"
+import { motion } from "framer-motion"
+import { IoLocationSharp } from "react-icons/io5"
+import { FiDownload } from "react-icons/fi"
 
 export default function Aboutme() {
-  const baseDelay = 0.2;
-
   return (
-    <div id="aboutMe" className="flex h-full w-full flex-col items-center px-2">
-      <section className="mt-0 flex h-full w-full max-w-[69.5em] flex-col items-center justify-center rounded-xl bg-white px-5 drop-shadow dark:bg-black/60 md:mt-28">
-        <div className="flex w-full max-w-7xl flex-col items-center justify-center gap-12 px-4 py-8">
-          <div className="flex w-full items-center gap-4">
-            <Image src={profilePic} alt="foto de perfil" width={80} />
-            <div>
-              <h3
-                className={`${outfit.className} text-xl font-semibold text-gray-800 dark:text-white`}
-              >
-                Gabriel Feitosa
-              </h3>
-              <div className="flex items-center gap-1">
-                <IoLocationSharp className="text-[#6e6ad2]" />
-                <span className="text-sm font-light dark:text-white">
-                  Curitiba, PR - Brasil
+    <section
+      id="aboutMe"
+      className="relative w-full py-28 px-6"
+    >
+      <div className="mx-auto max-w-5xl">
+        {/* Section label */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mb-16 text-center"
+        >
+          <span className="text-sm font-medium uppercase tracking-[0.2em] text-td-green">
+            Sobre mim
+          </span>
+        </motion.div>
+
+        {/* Content grid */}
+        <div className="flex flex-col items-center gap-12 md:flex-row md:items-start md:gap-16">
+          {/* Profile image */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex-shrink-0"
+          >
+            <div className="relative">
+              <div className="absolute -inset-2 rounded-full bg-gradient-to-br from-td-green/25 to-td-purple/25 blur-md" />
+              <Image
+                src={profilePic}
+                alt="Gabriel Feitosa"
+                width={220}
+                height={220}
+                className="relative rounded-full object-cover"
+              />
+              {/* Location badge */}
+              <div className="absolute -bottom-3 left-1/2 flex -translate-x-1/2 items-center gap-1.5 rounded-full border border-td-border bg-td-bg-secondary px-3 py-1.5">
+                <IoLocationSharp className="text-td-green" size={14} />
+                <span className="whitespace-nowrap text-xs text-td-text-secondary">
+                  Curitiba, PR
                 </span>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="flex flex-col gap-5">
-            <h3
-              className={`${outfit.className} text-center text-3xl font-semibold text-gray-800 dark:text-white md:text-left`}
+          {/* Text content */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex flex-col gap-5"
+          >
+            <h2 className="font-heading text-3xl font-bold md:text-4xl">
+              Gabriel <span className="text-td-green">Feitosa</span>
+            </h2>
+
+            <div className="flex flex-col gap-4 text-base leading-relaxed text-td-text-secondary">
+              <p>
+                Sou estudante de <strong className="text-white">Ciência da Computação</strong> e
+                desenvolvedor Full Stack com foco em criar soluções digitais de
+                alta qualidade. Tenho experiência sólida com{" "}
+                <strong className="text-white">React, Next.js e Tailwind</strong> no
+                front-end, construindo interfaces modernas e responsivas.
+              </p>
+
+              <p>
+                No back-end, trabalho com{" "}
+                <strong className="text-white">
+                  Node.js, bancos de dados como PostgreSQL e MongoDB
+                </strong>
+                , e também desenvolvo aplicações mobile com{" "}
+                <strong className="text-white">React Native</strong>. Tenho experiência
+                com design em <strong className="text-white">Figma</strong> e otimização{" "}
+                <strong className="text-white">SEO</strong>.
+              </p>
+
+              <p>
+                Busco constantemente aperfeiçoar minhas habilidades e contribuir
+                com{" "}
+                <strong className="text-white">
+                  soluções criativas
+                </strong>{" "}
+                que unam design atraente e funcionalidade impecável.
+              </p>
+            </div>
+
+            <Link
+              href="/Fullstack-Gabriel-Feitosa.pdf"
+              target="_blank"
+              className="group mt-2 flex w-fit items-center gap-2 rounded-full border border-td-border bg-td-bg-secondary px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:border-td-green/50 hover:bg-td-green/10"
             >
-              Sobre mim
-            </h3>
-
-            <p className="text-justify text-sm dark:text-slate-50 md:text-base">
-              Meu nome é Gabriel, sou estudante de <b>Ciência da Computação</b>.
-              Tenho experiência em desenvolvimento web, com foco no{" "}
-              <b>front-end</b>, utilizando ferramentas como{" "}
-              <b>React, Next JS e Tailwind</b> para criar interfaces
-              modernas e responsivas.
-            </p>
-
-            <p className="text-justify text-sm dark:text-slate-50 md:text-base">
-              Atualmente, estou expandindo minha atuação para o desenvolvimento{" "}
-              <b>full-stack</b>, aprimorando meus conhecimentos em{" "}
-              <b>
-                Node.js, React Native e bancos de dados como Postgres e MongoDB.
-              </b>{" "}
-              Além disso, tenho experiência com design e <b>SEO</b>, usando{" "}
-              <b>Figma</b> para projetos visuais.
-            </p>
-
-            <p className="text-justify text-sm dark:text-slate-50 md:text-base">
-              Busco constantemente aperfeiçoar minhas habilidades e contribuir
-              com <b>soluções criativas</b> que unam design atraente e funcionalidade.
-            </p>
-
-            <Link href="/Fullstack-Gabriel-Feitosa.pdf" target="blank">
-              <button
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.15, delay: baseDelay * 6 }}
-                className="flex w-32 flex-row justify-center gap-2 rounded bg-[#6e6ad2] px-4 py-2 text-slate-50 drop-shadow duration-200 hover:scale-105 hover:bg-[#6e6ad2]/80 hover:text-white hover:ease-in-out"
-              >
-                Currículo
-              </button>
+              <FiDownload
+                size={16}
+                className="text-td-text-secondary transition-colors group-hover:text-td-green"
+              />
+              Download Currículo
             </Link>
-          </div>
+          </motion.div>
         </div>
-      </section>
-
-      <Cards />
-    </div>
-  );
+      </div>
+    </section>
+  )
 }
