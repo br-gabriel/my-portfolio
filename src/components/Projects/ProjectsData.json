@@ -33,38 +33,6 @@
             "category": "estudos"
         },
         {
-            "title": "Site Finans",
-            "description": "Landing page de uma instituição financeira fictícia, com design responsivo e layout moderno usando Bootstrap.",
-            "tags": [
-                "HTML", "Bootstrap", "Javascript"
-            ],
-            "image": {
-                "url": "/images/finans.png",
-                "alt": "Banner de apresentação mostrando a parte inicial do site Finans"
-            },
-            "links": {
-                "firstLink": "https://github.com/br-gabriel/Site-com-bootstrap-4",
-                "secondLink": "https://br-gabriel.github.io/Site-com-bootstrap-4/"
-            },
-            "category": "estudos"
-        },
-        {
-            "title": "Gestor Financeiro",
-            "description": "Aplicação web que armazena o histórico de entrada e saída de valores, calculando o saldo final automaticamente.",
-            "tags": [
-                "React", "Typescript"
-            ],
-            "image": {
-                "url": "/images/dtmoney.png",
-                "alt": "Banner mostrando o painel do gestor financeiro"
-            },
-            "links": {
-                "firstLink": "https://github.com/br-gabriel/dtmoney-finance",
-                "secondLink": "https://effulgent-crepe-8e024f.netlify.app"
-            },
-            "category": "estudos"
-        },
-        {
             "title": "Pneufree.com",
             "description": "O maior e-commerce especializado em pneus e rodas do Brasil, com uma experiência de compra moderna, busca avançada de produtos e alta performance.",
             "tags": [
@@ -114,13 +82,13 @@
         },
         {
             "title": "Loja Pneuzão",
-            "description": "Plataforma de e-commerce robusta para a Loja Pneuzão, oferecendo uma experiência de compra ágil, filtros avançados e checkout otimizado.",
+            "description": "Sistema interno completo de gestão para a Loja Pneuzão, integrando vendedores, estoquistas, setor financeiro e gerência em uma solução ponta a ponta que engloba desde a realização de vendas até o controle financeiro avançado.",
             "tags": [
-                "E-commerce", "UX/UI", "Filtros Avançados", "Responsivo"
+                "Sistema Interno", "Gestão & Vendas", "Financeiro", "UX/UI"
             ],
             "image": {
                 "url": "/images/pneuzao.png",
-                "alt": "Print da tela inicial do site Loja Pneuzão"
+                "alt": "Print da tela do sistema interno da Loja Pneuzão"
             },
             "links": {
                 "firstLink": "",

@@ -4,7 +4,7 @@ import Link from "next/link"
 import profilePic from "../../../public/images/profilePic.png"
 import { motion } from "framer-motion"
 import { IoLocationSharp } from "react-icons/io5"
-import { FiDownload } from "react-icons/fi"
+import { FiExternalLink } from "react-icons/fi"
 
 export default function Aboutme() {
   return (
@@ -70,8 +70,9 @@ export default function Aboutme() {
             <div className="flex flex-col gap-4 text-base leading-relaxed text-td-text-secondary">
               <p>
                 Sou estudante de <strong className="text-white">Ciência da Computação</strong> e
-                desenvolvedor Full Stack com foco em criar soluções digitais de
-                alta qualidade. Tenho experiência sólida com{" "}
+                desenvolvedor Full Stack. Atualmente trabalho na{" "}
+                <strong className="text-white">Pneufree.com</strong>, criando e
+                otimizando soluções digitais de alta qualidade. Tenho experiência sólida com{" "}
                 <strong className="text-white">React, Next.js e Tailwind</strong> no
                 front-end, construindo interfaces modernas e responsivas.
               </p>
@@ -98,15 +99,16 @@ export default function Aboutme() {
             </div>
 
             <Link
-              href="/Fullstack-Gabriel-Feitosa.pdf"
+              href="https://docs.google.com/document/d/1OfHc0ePblWrNwEngiM6yIGvVz1aM2flbVE4sk0GGfzY/edit?usp=sharing"
               target="_blank"
+              rel="noopener noreferrer"
               className="group mt-2 flex w-fit items-center gap-2 rounded-full border border-td-border bg-td-bg-secondary px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:border-td-green/50 hover:bg-td-green/10"
             >
-              <FiDownload
+              <FiExternalLink
                 size={16}
                 className="text-td-text-secondary transition-colors group-hover:text-td-green"
               />
-              Download Currículo
+              Acessar Currículo
             </Link>
           </motion.div>
         </div>
