@@ -70,8 +70,9 @@ export default function Aboutme() {
             <div className="flex flex-col gap-4 text-base leading-relaxed text-td-text-secondary">
               <p>
                 Sou estudante de <strong className="text-white">Ciência da Computação</strong> e
-                desenvolvedor Full Stack com foco em criar soluções digitais de
-                alta qualidade. Tenho experiência sólida com{" "}
+                desenvolvedor Full Stack. Atualmente trabalho na{" "}
+                <strong className="text-white">Pneufree.com</strong>, criando e
+                otimizando soluções digitais de alta qualidade. Tenho experiência sólida com{" "}
                 <strong className="text-white">React, Next.js e Tailwind</strong> no
                 front-end, construindo interfaces modernas e responsivas.
               </p>
