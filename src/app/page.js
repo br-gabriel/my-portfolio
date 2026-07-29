@@ -4,6 +4,7 @@ import Footer from "@/components/Footer"
 import Aboutme from "@/components/Aboutme"
 import Projects from "@/components/Projects"
 import TechCarousel from "@/components/TechCarousel"
+import Stack from "@/components/Stack"
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <TechCarousel />
       <Aboutme />
       <Projects />
+      <Stack />
       <Footer />
     </main>
   )

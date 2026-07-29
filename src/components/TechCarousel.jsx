@@ -1,37 +1,6 @@
 "use client"
 import { motion } from "framer-motion"
-import {
-  FaReact,
-  FaNodeJs,
-  FaDocker,
-  FaAws,
-  FaFigma,
-  FaGitAlt,
-  FaDatabase,
-} from "react-icons/fa"
-import {
-  SiNextdotjs,
-  SiTailwindcss,
-  SiMongodb,
-  SiJest,
-} from "react-icons/si"
-import { TbShieldCheck, TbAtom } from "react-icons/tb"
-
-const technologies = [
-  { name: "React", icon: FaReact, color: "#61DAFB" },
-  { name: "Next.js", icon: SiNextdotjs, color: "#ffffff" },
-  { name: "Node.js", icon: FaNodeJs, color: "#339933" },
-  { name: "Docker", icon: FaDocker, color: "#2496ED" },
-  { name: "Tailwind", icon: SiTailwindcss, color: "#06B6D4" },
-  { name: "AWS", icon: FaAws, color: "#FF9900" },
-  { name: "Figma", icon: FaFigma, color: "#F24E1E" },
-  { name: "Zustand", icon: TbAtom, color: "#614a30" },
-  { name: "Zod", icon: TbShieldCheck, color: "#3068B7" },
-  { name: "Jest", icon: SiJest, color: "#C21325" },
-  { name: "SQL", icon: FaDatabase, color: "#4479A1" },
-  { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
-  { name: "Git", icon: FaGitAlt, color: "#F05032" },
-]
+import { flatTechnologies as technologies } from "../data/technologies"
 
 function TechItem({ name, icon: Icon, color }) {
   return (
