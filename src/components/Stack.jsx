@@ -16,7 +16,7 @@ export default function Stack() {
           className="mb-14"
         >
           <span className="text-sm font-medium uppercase tracking-[0.2em] text-td-green">
-            // Stack
+            {'// Stack'}
           </span>
           <h2 className="mt-4 font-heading text-3xl font-bold uppercase tracking-wide md:text-5xl">
             Com o que eu trabalho
