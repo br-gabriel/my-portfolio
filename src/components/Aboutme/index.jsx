@@ -99,7 +99,7 @@ export default function Aboutme() {
             </div>
 
             <Link
-              href="https://docs.google.com/document/d/1OfHc0ePblWrNwEngiM6yIGvVz1aM2flbVE4sk0GGfzY/edit?usp=sharing"
+              href="https://drive.google.com/file/d/1IeRSLgkIs3xAeBRXuYutlHaJB1aJ95hB/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="group mt-2 flex w-fit items-center gap-2 rounded-full border border-td-border bg-td-bg-secondary px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:border-td-green/50 hover:bg-td-green/10"
