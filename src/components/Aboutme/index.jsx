@@ -69,32 +69,15 @@ export default function Aboutme() {
 
             <div className="flex flex-col gap-4 text-base leading-relaxed text-td-text-secondary">
               <p>
-                Sou estudante de <strong className="text-white">Ciência da Computação</strong> e
-                desenvolvedor Full Stack. Atualmente trabalho na{" "}
-                <strong className="text-white">Pneufree.com</strong>, criando e
-                otimizando soluções digitais de alta qualidade. Tenho experiência sólida com{" "}
-                <strong className="text-white">React, Next.js e Tailwind</strong> no
-                front-end, construindo interfaces modernas e responsivas.
+                Sou desenvolvedor <strong className="text-white">Full Stack</strong> com mais de<strong className="text-white"> 2 anos de experiência</strong>, especializado em criar e otimizar soluções digitais de alta performance. Atualmente, atuo no grupo <strong className="text-white">Pneufree.com</strong>, um dos maiores e-commerces do segmento no Brasil, entregando sistemas escaláveis e eficientes.
               </p>
 
               <p>
-                No back-end, trabalho com{" "}
-                <strong className="text-white">
-                  Node.js, bancos de dados como PostgreSQL e MongoDB
-                </strong>
-                , e também desenvolvo aplicações mobile com{" "}
-                <strong className="text-white">React Native</strong>. Tenho experiência
-                com design em <strong className="text-white">Figma</strong> e otimização{" "}
-                <strong className="text-white">SEO</strong>.
+                Tenho sólida vivência no desenvolvimento de interfaces modernas e responsivas utilizando <strong className="text-white">React, Next.js, TypeScript e Tailwind</strong>. No back-end, construo arquiteturas robustas com <strong className="text-white">Node.js</strong> e bancos de dados como <strong className="text-white">SQL Server, PostgreSQL e MongoDB</strong>. Além do código, possuo um forte olhar para <strong className="text-white">UI/UX</strong>, utilizando o <strong className="text-white">Figma</strong> para aprimorar a usabilidade das aplicações.
               </p>
 
               <p>
-                Busco constantemente aperfeiçoar minhas habilidades e contribuir
-                com{" "}
-                <strong className="text-white">
-                  soluções criativas
-                </strong>{" "}
-                que unam design atraente e funcionalidade impecável.
+                Com perfil <strong className="text-white">proativo</strong> e <strong className="text-white">colaborativo</strong>, foco em unir design atraente, código limpo e funcionalidade impecável para resolver problemas reais e trazer melhorias contínuas aos projetos em que atuo.
               </p>
             </div>
 
