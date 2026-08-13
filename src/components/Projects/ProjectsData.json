@@ -52,7 +52,7 @@
             "title": "Xbri Pneus",
             "description": "Website oficial da Xbri Pneus, focado em branding institucional, catálogo completo de produtos e alta performance com design responsivo.",
             "tags": [
-                "Branding", "Catálogo", "UX/UI", "Responsivo"
+                "Branding", "Catálogo", "UX/UI", "E-commerce"
             ],
             "image": {
                 "url": "/images/xbri.png",
@@ -68,7 +68,7 @@
             "title": "Michelin Pneufree",
             "description": "Plataforma e landing page premium desenvolvida em parceria com a Michelin para apresentação e venda da linha de pneus de alta performance.",
             "tags": [
-                "Landing Page", "E-commerce", "Parceria Premium", "UX/UI"
+                "MongoDB", "E-commerce", "Parceria Premium", "UX/UI"
             ],
             "image": {
                 "url": "/images/michelin.png",
@@ -92,7 +92,7 @@
             },
             "links": {
                 "firstLink": "",
-                "secondLink": "https://loja.pneuzao.com.br"
+                "secondLink": "https://pneuzao.com.br"
             },
             "category": "profissional"
         },
