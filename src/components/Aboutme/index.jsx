@@ -69,7 +69,7 @@ export default function Aboutme() {
 
             <div className="flex flex-col gap-4 text-base leading-relaxed text-td-text-secondary">
               <p>
-                Sou desenvolvedor <strong className="text-white">Full Stack</strong> com mais de<strong className="text-white"> 2 anos de experiência</strong>, especializado em criar e otimizar soluções digitais de alta performance. Atualmente, atuo no grupo <strong className="text-white">Pneufree.com</strong>, um dos maiores e-commerces do segmento no Brasil, entregando sistemas escaláveis e eficientes.
+                Sou desenvolvedor <strong className="text-white">Full Stack</strong> com mais de<strong className="text-white"> 3 anos de experiência</strong>, especializado em criar e otimizar soluções digitais de alta performance. Atualmente, atuo no grupo <strong className="text-white">Pneufree.com</strong>, um dos maiores e-commerces do segmento no Brasil, entregando sistemas escaláveis e eficientes.
               </p>
 
               <p>
