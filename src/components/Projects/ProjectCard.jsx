@@ -4,7 +4,11 @@ import Link from "next/link"
 import { motion } from "framer-motion"
 import { FiGithub, FiExternalLink } from "react-icons/fi"
 
-export default function ProjectCard({ project, index }) {
+export default function ProjectCard({ project, index, language, labels }) {
+  const description = project.description[language] ?? project.description.pt
+  const alt = project.image.alt[language] ?? project.image.alt.pt
+  const tags = project.tags[language] ?? project.tags.pt
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 40 }}
@@ -17,7 +21,7 @@ export default function ProjectCard({ project, index }) {
       <div className="relative aspect-[16/10] w-full overflow-hidden bg-td-bg-secondary">
         <Image
           src={project.image.url}
-          alt={project.image.alt}
+          alt={alt}
           fill
           className="object-cover transition-transform duration-700 group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, 50vw"
@@ -31,7 +35,7 @@ export default function ProjectCard({ project, index }) {
               className="flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-td-bg transition-transform hover:scale-105"
             >
               <FiGithub size={16} />
-              Código
+              {labels.code}
             </Link>
           )}
           {project.links.secondLink && (
@@ -41,7 +45,7 @@ export default function ProjectCard({ project, index }) {
               className="flex items-center gap-2 rounded-full bg-td-green px-5 py-2.5 text-sm font-semibold text-td-bg transition-transform hover:scale-105"
             >
               <FiExternalLink size={16} />
-              {project.links.firstLink ? "Demo" : "Acessar site"}
+              {project.links.firstLink ? labels.demo : labels.visit}
             </Link>
           )}
         </div>
@@ -54,12 +58,12 @@ export default function ProjectCard({ project, index }) {
         </h3>
 
         <p className="mt-3 text-sm leading-relaxed text-td-text-secondary">
-          {project.description}
+          {description}
         </p>
 
         {/* Tags */}
         <div className="mt-5 flex flex-wrap gap-2">
-          {project.tags.map((tag) => (
+          {tags.map((tag) => (
             <span
               key={tag}
               className="rounded-full border border-td-border bg-td-bg px-3 py-1 text-xs font-medium text-td-text-secondary"

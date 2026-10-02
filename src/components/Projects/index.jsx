@@ -3,15 +3,16 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 import ProjectCard from "./ProjectCard"
 import projectsData from "./ProjectsData.json"
+import { useLanguage } from "@/i18n/LanguageContext"
 
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("profissional")
+  const { t, language } = useLanguage()
 
-  const categories = [
-    { id: "profissional", label: "Profissional" },
-    { id: "pessoais", label: "Proj. Pessoais" },
-    { id: "estudos", label: "Estudos" }
-  ]
+  const categories = ["profissional", "pessoais", "estudos"].map((id) => ({
+    id,
+    label: t.projects.categories[id],
+  }))
 
   const filteredProjects = projectsData.projectsCards.filter(
     (project) => project.category === selectedCategory
@@ -35,13 +36,13 @@ export default function Projects() {
           className="mb-12 text-center"
         >
           <span className="text-sm font-medium uppercase tracking-[0.2em] text-td-green">
-            Portfólio
+            {t.projects.label}
           </span>
           <h2 className="mt-4 font-heading text-3xl font-bold md:text-5xl">
-            Projetos <span className="text-td-green">recentes</span>
+            {t.projects.title} <span className="text-td-green">{t.projects.titleHighlight}</span>
           </h2>
           <p className="mt-4 text-td-text-secondary">
-            Uma seleção dos meus trabalhos mais relevantes
+            {t.projects.subtitle}
           </p>
         </motion.div>
 
@@ -76,7 +77,7 @@ export default function Projects() {
         {filteredProjects.length > 0 ? (
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {filteredProjects.map((project, index) => (
-              <ProjectCard key={project.title} project={project} index={index} />
+              <ProjectCard key={project.title} project={project} index={index} language={language} labels={t.projects} />
             ))}
           </div>
         ) : (
@@ -86,7 +87,7 @@ export default function Projects() {
             className="py-16 text-center"
           >
             <p className="text-td-text-secondary">
-              Nenhum projeto cadastrado nesta categoria no momento.
+              {t.projects.empty}
             </p>
           </motion.div>
         )}

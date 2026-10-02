@@ -1,6 +1,7 @@
 "use client"
 import { motion } from "framer-motion"
-import { flatTechnologies as technologies } from "../data/technologies"
+import { flatTechnologies as technologies, getTechName } from "../data/technologies"
+import { useLanguage } from "@/i18n/LanguageContext"
 
 function TechItem({ name, icon: Icon, color }) {
   return (
@@ -18,6 +19,7 @@ function TechItem({ name, icon: Icon, color }) {
 }
 
 export default function TechCarousel() {
+  const { t, language } = useLanguage()
   // Duplicate the array for infinite scroll effect
   const doubledTech = [...technologies, ...technologies]
 
@@ -31,7 +33,7 @@ export default function TechCarousel() {
     >
       <div className="mx-auto mb-6 max-w-7xl px-6">
         <p className="text-center text-sm font-medium uppercase tracking-[0.2em] text-td-text-secondary">
-          Tecnologias que domino
+          {t.techCarousel.title}
         </p>
       </div>
 
@@ -45,8 +47,8 @@ export default function TechCarousel() {
         <div className="animate-scroll-left flex w-max gap-4">
           {doubledTech.map((tech, index) => (
             <TechItem
-              key={`${tech.name}-${index}`}
-              name={tech.name}
+              key={`${getTechName(tech.name, "en")}-${index}`}
+              name={getTechName(tech.name, language)}
               icon={tech.icon}
               color={tech.color}
             />

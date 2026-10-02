@@ -4,11 +4,14 @@ import { motion } from "framer-motion"
 import { FaLinkedin, FaWhatsapp, FaGithub } from "react-icons/fa"
 import { MdEmail } from "react-icons/md"
 import { FiArrowUpRight } from "react-icons/fi"
+import { useLanguage } from "@/i18n/LanguageContext"
 
 export default function Footer() {
+  const { t } = useLanguage()
+
   const handleCopyEmail = () => {
     navigator.clipboard.writeText("contato.gabrielfeitosa@gmail.com")
-    alert("E-mail copiado!")
+    alert(t.footer.emailCopied)
   }
 
   return (
@@ -25,15 +28,14 @@ export default function Footer() {
         className="mx-auto max-w-5xl px-6 py-24 text-center"
       >
         <span className="text-sm font-medium uppercase tracking-[0.2em] text-td-green">
-          Contato
+          {t.footer.label}
         </span>
         <h2 className="mt-6 font-heading text-4xl font-bold md:text-6xl">
-          Vamos construir algo{" "}
-          <span className="text-td-green">incrível</span> juntos?
+          {t.footer.titleStart}{" "}
+          <span className="text-td-green">{t.footer.titleHighlight}</span> {t.footer.titleEnd}
         </h2>
         <p className="mx-auto mt-6 max-w-lg text-td-text-secondary">
-          Estou sempre aberto a novos projetos e oportunidades. Entre em
-          contato e vamos conversar.
+          {t.footer.subtitle}
         </p>
 
         {/* Contact links */}
@@ -62,7 +64,7 @@ export default function Footer() {
       <div className="border-t border-td-border">
         <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 px-6 py-6 sm:flex-row">
           <span className="text-xs text-td-text-secondary">
-            © {new Date().getFullYear()} Gabriel Feitosa. Todos os direitos reservados.
+            © {new Date().getFullYear()} Gabriel Feitosa. {t.footer.rights}
           </span>
 
           <div className="flex items-center gap-4">

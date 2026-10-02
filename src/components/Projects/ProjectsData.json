@@ -2,13 +2,30 @@
     "projectsCards": [
         {
             "title": "Cripto Tracker App",
-            "description": "Aplicativo para acompanhar as principais informações de criptomoedas em tempo real, com gráficos interativos e busca avançada.",
-            "tags": [
-                "React Native", "Styled Components", "React Navigation", "Chart Kit"
-            ],
+            "description": {
+                "pt": "Aplicativo para acompanhar as principais informações de criptomoedas em tempo real, com gráficos interativos e busca avançada.",
+                "en": "An app to track key cryptocurrency information in real time, with interactive charts and advanced search."
+            },
+            "tags": {
+                "pt": [
+                    "React Native",
+                    "Styled Components",
+                    "React Navigation",
+                    "Chart Kit"
+                ],
+                "en": [
+                    "React Native",
+                    "Styled Components",
+                    "React Navigation",
+                    "Chart Kit"
+                ]
+            },
             "image": {
                 "url": "/images/cripto.png",
-                "alt": "Banner de apresentação do aplicativo, mostrando as três telas principais"
+                "alt": {
+                    "pt": "Banner de apresentação do aplicativo, mostrando as três telas principais",
+                    "en": "Presentation banner of the app, showing its three main screens"
+                }
             },
             "links": {
                 "firstLink": "https://github.com/br-gabriel/cripto-app",
@@ -18,13 +35,34 @@
         },
         {
             "title": "Habit App",
-            "description": "Site e aplicativo de acompanhamento de hábitos com backend integrado, permitindo criar e monitorar hábitos diários.",
-            "tags": [
-                "React", "React Native", "Node", "Tailwind", "Prisma", "SQLite"
-            ],
+            "description": {
+                "pt": "Site e aplicativo de acompanhamento de hábitos com backend integrado, permitindo criar e monitorar hábitos diários.",
+                "en": "A habit-tracking website and app with an integrated backend, allowing you to create and monitor daily habits."
+            },
+            "tags": {
+                "pt": [
+                    "React",
+                    "React Native",
+                    "Node",
+                    "Tailwind",
+                    "Prisma",
+                    "SQLite"
+                ],
+                "en": [
+                    "React",
+                    "React Native",
+                    "Node",
+                    "Tailwind",
+                    "Prisma",
+                    "SQLite"
+                ]
+            },
             "image": {
                 "url": "/images/habits.png",
-                "alt": "Banner de apresentação do site e do aplicativo de hábitos"
+                "alt": {
+                    "pt": "Banner de apresentação do site e do aplicativo de hábitos",
+                    "en": "Presentation banner of the habits website and app"
+                }
             },
             "links": {
                 "firstLink": "https://github.com/br-gabriel/NLW-Habit-Tracker",
@@ -34,13 +72,30 @@
         },
         {
             "title": "Pneufree.com",
-            "description": "O maior e-commerce especializado em pneus e rodas do Brasil, com uma experiência de compra moderna, busca avançada de produtos e alta performance.",
-            "tags": [
-                "E-commerce", "UX/UI", "Next.js", "Tailwind"
-            ],
+            "description": {
+                "pt": "O maior e-commerce especializado em pneus e rodas do Brasil, com uma experiência de compra moderna, busca avançada de produtos e alta performance.",
+                "en": "Brazil's largest e-commerce specialized in tires and wheels, with a modern shopping experience, advanced product search and high performance."
+            },
+            "tags": {
+                "pt": [
+                    "E-commerce",
+                    "UX/UI",
+                    "Next.js",
+                    "Tailwind"
+                ],
+                "en": [
+                    "E-commerce",
+                    "UX/UI",
+                    "Next.js",
+                    "Tailwind"
+                ]
+            },
             "image": {
                 "url": "/images/pneufree.png",
-                "alt": "Print da tela inicial do site Pneufree.com"
+                "alt": {
+                    "pt": "Print da tela inicial do site Pneufree.com",
+                    "en": "Screenshot of the Pneufree.com home page"
+                }
             },
             "links": {
                 "firstLink": "",
@@ -50,13 +105,30 @@
         },
         {
             "title": "Xbri Pneus",
-            "description": "Website oficial da Xbri Pneus, focado em branding institucional, catálogo completo de produtos e alta performance com design responsivo.",
-            "tags": [
-                "Branding", "Catálogo", "UX/UI", "E-commerce"
-            ],
+            "description": {
+                "pt": "Website oficial da Xbri Pneus, focado em branding institucional, catálogo completo de produtos e alta performance com design responsivo.",
+                "en": "Official website of Xbri Pneus, focused on institutional branding, a complete product catalog and high performance with responsive design."
+            },
+            "tags": {
+                "pt": [
+                    "Branding",
+                    "Catálogo",
+                    "UX/UI",
+                    "E-commerce"
+                ],
+                "en": [
+                    "Branding",
+                    "Catalog",
+                    "UX/UI",
+                    "E-commerce"
+                ]
+            },
             "image": {
                 "url": "/images/xbri.png",
-                "alt": "Print da tela inicial do site Xbri Pneus"
+                "alt": {
+                    "pt": "Print da tela inicial do site Xbri Pneus",
+                    "en": "Screenshot of the Xbri Pneus home page"
+                }
             },
             "links": {
                 "firstLink": "",
@@ -66,13 +138,30 @@
         },
         {
             "title": "Michelin Pneufree",
-            "description": "Plataforma e landing page premium desenvolvida em parceria com a Michelin para apresentação e venda da linha de pneus de alta performance.",
-            "tags": [
-                "MongoDB", "E-commerce", "Parceria Premium", "UX/UI"
-            ],
+            "description": {
+                "pt": "Plataforma e landing page premium desenvolvida em parceria com a Michelin para apresentação e venda da linha de pneus de alta performance.",
+                "en": "Premium platform and landing page developed in partnership with Michelin to showcase and sell its high-performance tire line."
+            },
+            "tags": {
+                "pt": [
+                    "MongoDB",
+                    "E-commerce",
+                    "Parceria Premium",
+                    "UX/UI"
+                ],
+                "en": [
+                    "MongoDB",
+                    "E-commerce",
+                    "Premium Partnership",
+                    "UX/UI"
+                ]
+            },
             "image": {
                 "url": "/images/michelin.png",
-                "alt": "Print da tela inicial do site Michelin Pneufree"
+                "alt": {
+                    "pt": "Print da tela inicial do site Michelin Pneufree",
+                    "en": "Screenshot of the Michelin Pneufree home page"
+                }
             },
             "links": {
                 "firstLink": "",
@@ -82,13 +171,30 @@
         },
         {
             "title": "Loja Pneuzão",
-            "description": "Sistema interno completo de gestão para a Loja Pneuzão, integrando vendedores, estoquistas, setor financeiro e gerência em uma solução ponta a ponta que engloba desde a realização de vendas até o controle financeiro avançado.",
-            "tags": [
-                "Sistema Interno", "Gestão & Vendas", "Financeiro", "UX/UI"
-            ],
+            "description": {
+                "pt": "Sistema interno completo de gestão para a Loja Pneuzão, integrando vendedores, estoquistas, setor financeiro e gerência em uma solução ponta a ponta que engloba desde a realização de vendas até o controle financeiro avançado.",
+                "en": "A complete internal management system for Loja Pneuzão, connecting salespeople, stock clerks, finance and management in an end-to-end solution covering everything from sales to advanced financial control."
+            },
+            "tags": {
+                "pt": [
+                    "Sistema Interno",
+                    "Gestão & Vendas",
+                    "Financeiro",
+                    "UX/UI"
+                ],
+                "en": [
+                    "Internal System",
+                    "Management & Sales",
+                    "Finance",
+                    "UX/UI"
+                ]
+            },
             "image": {
                 "url": "/images/pneuzao.png",
-                "alt": "Print da tela do sistema interno da Loja Pneuzão"
+                "alt": {
+                    "pt": "Print da tela do sistema interno da Loja Pneuzão",
+                    "en": "Screenshot of the Loja Pneuzão internal system"
+                }
             },
             "links": {
                 "firstLink": "",
@@ -98,13 +204,30 @@
         },
         {
             "title": "Fast Paste",
-            "description": "Extensão para o Google Chrome que otimiza sua produtividade ao permitir salvar, organizar e colar trechos de texto e prompts frequentes com apenas um clique.",
-            "tags": [
-                "Extensão Chrome", "HTML/CSS", "JavaScript", "Produtividade"
-            ],
+            "description": {
+                "pt": "Extensão para o Google Chrome que otimiza sua produtividade ao permitir salvar, organizar e colar trechos de texto e prompts frequentes com apenas um clique.",
+                "en": "A Google Chrome extension that boosts your productivity by letting you save, organize and paste frequently used text snippets and prompts with a single click."
+            },
+            "tags": {
+                "pt": [
+                    "Extensão Chrome",
+                    "HTML/CSS",
+                    "JavaScript",
+                    "Produtividade"
+                ],
+                "en": [
+                    "Chrome Extension",
+                    "HTML/CSS",
+                    "JavaScript",
+                    "Productivity"
+                ]
+            },
             "image": {
                 "url": "/images/fastPaste.png",
-                "alt": "Banner da extensão Fast Paste na Chrome Web Store"
+                "alt": {
+                    "pt": "Banner da extensão Fast Paste na Chrome Web Store",
+                    "en": "Banner of the Fast Paste extension on the Chrome Web Store"
+                }
             },
             "links": {
                 "firstLink": "",

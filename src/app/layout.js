@@ -1,5 +1,7 @@
 import './globals.css'
 import { Space_Grotesk, Outfit } from 'next/font/google'
+import { LanguageProvider } from '@/i18n/LanguageContext'
+import DocumentTitle from '@/i18n/DocumentTitle'
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -14,15 +16,18 @@ const outfit = Outfit({
 })
 
 export const metadata = {
-  title: 'Gabriel Feitosa — Desenvolvedor Full Stack',
-  description: 'Portfólio de Gabriel Feitosa. Desenvolvedor Full Stack apaixonado por criar experiências digitais modernas com React, Next.js, Node.js e mais.',
+  title: 'Gabriel Feitosa — Full Stack Developer',
+  description: 'Portfolio of Gabriel Feitosa. Full Stack Developer passionate about building modern digital experiences with React, Next.js, Node.js and more. | Portfólio de Gabriel Feitosa, Desenvolvedor Full Stack.',
 }
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt-BR" className={`${spaceGrotesk.variable} ${outfit.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${spaceGrotesk.variable} ${outfit.variable}`}>
       <body className="font-body bg-td-bg text-white antialiased">
-        {children}
+        <LanguageProvider>
+          <DocumentTitle />
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   )

@@ -2,8 +2,11 @@
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { FaLinkedin, FaGithub } from "react-icons/fa"
+import { useLanguage } from "@/i18n/LanguageContext"
+import FitHeadline from "./FitHeadline"
 
 export default function Homepage() {
+  const { t } = useLanguage()
   return (
     <section
       id="home"
@@ -29,23 +32,18 @@ export default function Homepage() {
             <span className="relative inline-flex h-2 w-2 rounded-full bg-td-green" />
           </span>
           <span className="text-sm text-td-text-secondary">
-            Disponível para novos projetos
+            {t.home.badge}
           </span>
         </motion.div>
 
         {/* Main Heading */}
-        <motion.h1
+        <FitHeadline
+          lines={t.home.titleLines}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
           className="glow-green text-center font-heading text-5xl font-bold leading-tight tracking-tight md:text-7xl lg:text-8xl"
-        >
-          Eu construo
-          <br />
-          <span className="text-td-green">experiências</span>
-          <br />
-          digitais
-        </motion.h1>
+        />
 
         {/* Subtitle */}
         <motion.p
@@ -54,8 +52,7 @@ export default function Homepage() {
           transition={{ duration: 0.5, delay: 0.8 }}
           className="mt-8 max-w-xl text-center text-base leading-relaxed text-td-text-secondary md:text-lg"
         >
-          Desenvolvedor Full Stack apaixonado por transformar ideias em
-          interfaces modernas, performáticas e com código limpo.
+          {t.home.subtitle}
         </motion.p>
 
         {/* CTA Buttons */}
@@ -97,7 +94,7 @@ export default function Homepage() {
           className="flex flex-col items-center gap-2"
         >
           <span className="text-xs tracking-widest text-td-text-secondary">
-            SCROLL
+            {t.home.scroll}
           </span>
           <svg
             className="h-5 w-5 text-td-text-secondary"

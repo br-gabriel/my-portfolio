@@ -3,11 +3,14 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-scroll'
 import { useCallback, useEffect, useState } from 'react'
 import ResponsiveMenu from './ResponsiveMenu'
+import LanguageSwitch from './LanguageSwitch'
+import { useLanguage } from '@/i18n/LanguageContext'
 
 export default function Header() {
   const [scrollPos, setScrollPos] = useState(0)
   const [scrollDir, setScrollDir] = useState('down')
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const { t } = useLanguage()
 
   const openMenu = useCallback(() => setIsMenuOpen(true), [])
   const closeMenu = useCallback(() => setIsMenuOpen(false), [])
@@ -73,7 +76,7 @@ export default function Header() {
                   duration={800}
                   className="cursor-pointer transition-colors duration-200 hover:text-td-green"
                 >
-                  Home
+                  {t.header.home}
                 </Link>
               </li>
               <li>
@@ -84,7 +87,7 @@ export default function Header() {
                   duration={800}
                   className="cursor-pointer transition-colors duration-200 hover:text-td-green"
                 >
-                  Sobre mim
+                  {t.header.about}
                 </Link>
               </li>
               <li>
@@ -95,7 +98,7 @@ export default function Header() {
                   duration={800}
                   className="cursor-pointer transition-colors duration-200 hover:text-td-green"
                 >
-                  Projetos
+                  {t.header.projects}
                 </Link>
               </li>
               <li>
@@ -105,14 +108,18 @@ export default function Header() {
                   duration={800}
                   className="cursor-pointer rounded-full bg-td-green px-5 py-2 text-sm font-semibold text-td-bg transition-all duration-200 hover:bg-td-green-dark hover:shadow-lg hover:shadow-td-green/20"
                 >
-                  Fale Comigo
+                  {t.header.contact}
                 </Link>
+              </li>
+              <li className="-ml-5">
+                <LanguageSwitch />
               </li>
             </ul>
           </nav>
 
           {/* Mobile menu button */}
-          <button className="p-2 md:hidden" onClick={openMenu} aria-label="Abrir menu">
+          <div className="flex items-center gap-2 md:hidden">
+          <button className="p-2" onClick={openMenu} aria-label={t.header.openMenu}>
             <svg
               className="h-6 w-6 text-td-green"
               fill="none"
@@ -123,6 +130,8 @@ export default function Header() {
               <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
+          <LanguageSwitch />
+          </div>
         </div>
       </motion.header>
 

@@ -5,8 +5,14 @@ import profilePic from "../../../public/images/profilePic.png"
 import { motion } from "framer-motion"
 import { IoLocationSharp } from "react-icons/io5"
 import { FiExternalLink } from "react-icons/fi"
+import { useLanguage } from "@/i18n/LanguageContext"
+import { useExperience } from "@/data/experience"
+
+const b = (text) => <strong className="text-white">{text}</strong>
 
 export default function Aboutme() {
+  const { t } = useLanguage()
+  const experience = useExperience()
   return (
     <section
       id="aboutMe"
@@ -22,7 +28,7 @@ export default function Aboutme() {
           className="mb-16 text-center"
         >
           <span className="text-sm font-medium uppercase tracking-[0.2em] text-td-green">
-            Sobre mim
+            {t.about.label}
           </span>
         </motion.div>
 
@@ -68,21 +74,15 @@ export default function Aboutme() {
             </h2>
 
             <div className="flex flex-col gap-4 text-base leading-relaxed text-td-text-secondary">
-              <p>
-                Sou desenvolvedor <strong className="text-white">Full Stack</strong> com mais de<strong className="text-white"> 3 anos de experiência</strong>, especializado em criar e otimizar soluções digitais de alta performance. Atualmente, atuo no grupo <strong className="text-white">Pneufree.com</strong>, um dos maiores e-commerces do segmento no Brasil, entregando sistemas escaláveis e eficientes.
-              </p>
+              <p>{t.about.p1(b, experience)}</p>
 
-              <p>
-                Tenho sólida vivência no desenvolvimento de interfaces modernas e responsivas utilizando <strong className="text-white">React, Next.js, TypeScript e Tailwind</strong>. No back-end, construo arquiteturas robustas com <strong className="text-white">Node.js</strong> e bancos de dados como <strong className="text-white">SQL Server, PostgreSQL e MongoDB</strong>. Além do código, possuo um forte olhar para <strong className="text-white">UI/UX</strong>, utilizando o <strong className="text-white">Figma</strong> para aprimorar a usabilidade das aplicações.
-              </p>
+              <p>{t.about.p2(b)}</p>
 
-              <p>
-                Com perfil <strong className="text-white">proativo</strong> e <strong className="text-white">colaborativo</strong>, foco em unir design atraente, código limpo e funcionalidade impecável para resolver problemas reais e trazer melhorias contínuas aos projetos em que atuo.
-              </p>
+              <p>{t.about.p3(b)}</p>
             </div>
 
             <Link
-              href="https://drive.google.com/file/d/1IeRSLgkIs3xAeBRXuYutlHaJB1aJ95hB/view?usp=sharing"
+              href={t.about.resumeUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="group mt-2 flex w-fit items-center gap-2 rounded-full border border-td-border bg-td-bg-secondary px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:border-td-green/50 hover:bg-td-green/10"
@@ -91,7 +91,7 @@ export default function Aboutme() {
                 size={16}
                 className="text-td-text-secondary transition-colors group-hover:text-td-green"
               />
-              Acessar Currículo
+              {t.about.resume}
             </Link>
           </motion.div>
         </div>

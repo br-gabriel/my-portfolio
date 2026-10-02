@@ -18,18 +18,31 @@ import {
   SiJavascript,
   SiPostgresql,
   SiKotlin,
+  SiNestjs,
+  SiGraphql,
+  SiApachekafka,
+  SiKubernetes,
+  SiSupabase,
 } from "react-icons/si"
-import { TbShieldCheck, TbAtom } from "react-icons/tb"
+import { TbShieldCheck, TbAtom, TbTopologyStar3 } from "react-icons/tb"
+
+// "name" pode ser uma string (igual em todos os idiomas) ou um objeto { pt, en }
 
 export const stackData = [
   {
     category: "Backend",
     items: [
       { name: "Node.js", icon: FaNodeJs, color: "#339933" },
+      { name: "Nest.js", icon: SiNestjs, color: "#E0234E" },
+      { name: { pt: "Microsserviços", en: "Microservices" }, icon: TbTopologyStar3, color: "#00DC82" },
+      { name: "GraphQL", icon: SiGraphql, color: "#E10098" },
+      { name: "Kafka", icon: SiApachekafka, color: "#ffffff" },
       { name: "PostgreSQL", icon: SiPostgresql, color: "#336791" },
       { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
+      { name: "Supabase", icon: SiSupabase, color: "#3ECF8E" },
       { name: "SQL", icon: FaDatabase, color: "#4479A1" },
       { name: "Docker", icon: FaDocker, color: "#2496ED" },
+      { name: "Kubernetes", icon: SiKubernetes, color: "#326CE5" },
       { name: "AWS", icon: FaAws, color: "#FF9900" },
     ],
   },
@@ -63,5 +76,8 @@ export const stackData = [
     ],
   },
 ]
+
+export const getTechName = (name, language) =>
+  typeof name === "string" ? name : name[language] ?? name.pt
 
 export const flatTechnologies = stackData.flatMap(group => group.items)

@@ -1,8 +1,10 @@
 "use client"
 import { motion } from "framer-motion"
-import { stackData } from "../data/technologies"
+import { stackData, getTechName } from "../data/technologies"
+import { useLanguage } from "@/i18n/LanguageContext"
 
 export default function Stack() {
+  const { t, language } = useLanguage()
   return (
     <section className="relative w-full overflow-hidden border-t border-td-border bg-td-bg-secondary/30 px-6 py-24">
       <div className="hero-grid-pattern absolute inset-0 opacity-40" />
@@ -19,7 +21,7 @@ export default function Stack() {
             {'// Stack'}
           </span>
           <h2 className="mt-4 font-heading text-3xl font-bold uppercase tracking-wide md:text-5xl">
-            Com o que eu trabalho
+            {t.stack.title}
           </h2>
         </motion.div>
 
@@ -35,7 +37,7 @@ export default function Stack() {
             >
               <div className="w-36 flex-shrink-0">
                 <h3 className="text-sm font-semibold uppercase tracking-widest text-td-green/80">
-                  {group.category}
+                  {t.stack.categories[group.category] ?? group.category}
                 </h3>
               </div>
               <div className="flex flex-wrap items-center gap-3 md:gap-4">
@@ -50,7 +52,7 @@ export default function Stack() {
                       className="transition-transform duration-300 group-hover:scale-110"
                     />
                     <span className="text-sm font-medium text-td-text-secondary transition-colors group-hover:text-white">
-                      {tech.name}
+                      {getTechName(tech.name, language)}
                     </span>
                   </div>
                 ))}
